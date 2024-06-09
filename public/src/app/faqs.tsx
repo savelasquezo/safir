@@ -23,7 +23,7 @@ export function Faqs() {
     <section className="px-8 py-20">
       <div className="container max-w-6xl mx-auto">
         <div className="text-center">
-          <Typography variant="h1" color="blue-gray" className="mb-4">
+          <Typography color="blue-gray" className="mb-4">
             Preguntas Frecuentes
           </Typography>
           <Typography

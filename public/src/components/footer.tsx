@@ -80,6 +80,7 @@ export function Footer() {
                   labelProps={{
                     className: "before:content-none after:content-none",
                   }}
+                  crossOrigin=""
                 />
                 <Typography variant="h6" color="white" className="-mb-3">
                   Asunto
@@ -97,6 +98,7 @@ export function Footer() {
                   labelProps={{
                     className: "before:content-none after:content-none",
                   }}
+                  crossOrigin=""
                 />
                 <Typography variant="h6" color="white" className="-mb-3">
                   Mensaje

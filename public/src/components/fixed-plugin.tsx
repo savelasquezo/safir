@@ -1,7 +1,7 @@
 "use client";
 // import Image from "next/image";
 // import { Button } from "@material-tailwind/react";
-
+// @ts-ignore
 import WhatsAppWidget from "react-whatsapp-chat-widget";
 import "react-whatsapp-chat-widget/index.css";
 

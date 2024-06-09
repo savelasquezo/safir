@@ -17,8 +17,8 @@ const OPTIONS = [
   },
 ];
 
-function useInterval(callback, delay) {
-  const savedCallback = useRef();
+function useInterval(callback: any, delay: number) {
+  const savedCallback = useRef<any | undefined>();
 
   // Remember the latest function.
   useEffect(() => {
@@ -28,7 +28,7 @@ function useInterval(callback, delay) {
   // Set up the interval.
   useEffect(() => {
     function tick() {
-      savedCallback.current();
+    savedCallback.current();
     }
     if (delay !== null) {
       let id = setInterval(tick, delay);

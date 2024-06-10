@@ -6,10 +6,15 @@ from django.template.loader import render_to_string
 from asgiref.sync import sync_to_async
 from django.utils import timezone
 
+from rest_framework.views import APIView
 from rest_framework import generics, status
 from rest_framework.response import Response
 
 from apps.src.models import Messages
+
+class serverStatus(APIView):
+    def get(self, request):
+        return Response({"status": "Servidor accesible"}, status=status.HTTP_200_OK)
 
 class sendMessage(generics.GenericAPIView):
     def post(self, request, *args, **kwargs):

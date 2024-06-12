@@ -62,7 +62,7 @@ export function Faqs() {
           </Typography>
           <Typography
             variant="lead"
-            className="mx-auto mb-24 !text-gray-700 lg:w-3/5"
+            className="mx-auto mb-10 !text-gray-700 lg:w-3/5"
           >
             Si necesita una mejor asesoría, no dude en contactarnos.
           </Typography>
@@ -70,19 +70,19 @@ export function Faqs() {
 
         <div className="grid gap-10 md:grid-cols-1 lg:grid-cols-1">
           {FAQS.map(({ title, desc }) => (
-            <Card key={title} shadow={false} color="transparent" className="w-full flex-row">
+            <Card key={title} shadow={false} color="transparent" className="w-full flex-row border-2 border-gray-500 hover:scale-110">
               <CardHeader
                 shadow={false}
                 floated={false}
-                className="m-0 w-2/5 shrink-0 rounded-r-none pt-6"
+                className="m-2 w-2/5 shrink-0 rounded-r-none pt-6"
               >
-              <Typography color="blue-gray" className="pb-6" variant="h4">
+              <Typography color="blue-gray" className="pb-6 text-justify" variant="h4">
                 {title}
               </Typography>
               </CardHeader>
               <CardBody>
                 <div className="pt-0">
-                  <Typography className="font-normal !text-gray-600">
+                  <Typography className="font-normal !text-gray-600 text-justify">
                     {desc}
                   </Typography>
                 </div>

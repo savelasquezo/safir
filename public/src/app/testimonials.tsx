@@ -33,11 +33,11 @@ export function Testimonials() {
   return (
     <section className="px-10 !py-10">
       <div className="container mx-auto">
-        <div className="mb-20 flex w-full flex-col items-center">
+        <div className="mb-10 flex w-full flex-col items-center">
           <div className="mb-10 flex h-12 w-12 items-center justify-center rounded-lg bg-gray-900 text-white ">
             <ChatBubbleLeftEllipsisIcon className="h-6 w-6" />
           </div>
-          <Typography variant="h2" color="blue-gray" className="mb-2">
+          <Typography variant="h2" color="blue-gray" className="mb-1">
             Lo que dicen nuestros clientes
           </Typography>
         </div>

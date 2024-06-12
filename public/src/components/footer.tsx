@@ -235,7 +235,7 @@ export function Footer() {
 
           <div className="flex gap-2">
             <IconButton variant="text" color="white">
-              <i className="fa-brands fa-twitter text-2xl not-italic opacity-75"></i>
+              <i className="fa-brands fa-tiktok text-2xl not-italic opacity-75"></i>
             </IconButton>
             <IconButton variant="text" color="white">
               <i className="fa-brands fa-facebook text-2xl not-italic opacity-75"></i>

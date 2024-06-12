@@ -93,7 +93,7 @@ export function Navbar() {
             color={isScrolling ? "gray" : "white"}
             size="sm"
           >
-            <i className="fa-brands fa-twitter text-base" />
+            <i className="fa-brands fa-tiktok text-base" />
           </IconButton>
           <IconButton
             variant="text"
@@ -140,7 +140,7 @@ export function Navbar() {
           </ul>
           <div className="mt-4 flex items-center gap-2">
             <IconButton variant="text" color="gray" size="sm">
-              <i className="fa-brands fa-twitter text-base" />
+              <i className="fa-brands fa-tiktok text-base" />
             </IconButton>
             <IconButton variant="text" color="gray" size="sm">
               <i className="fa-brands fa-facebook text-base" />

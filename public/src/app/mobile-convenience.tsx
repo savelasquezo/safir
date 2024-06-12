@@ -41,21 +41,22 @@ export function MobileConvenience() {
 
   const [numSoat, setNumSoat] = useState(0);
   const [numCreditos, setNumCreditos] = useState(0);
+  const [conteoTerminado, setConteoTerminado] = useState(false);
 
   useInterval(() => {
-    if (numSoat < 200) {
+    if (conteoTerminado && numSoat < 200) {
       setNumSoat(numSoat + 1);
     }
-  }, 100);
+  }, 10);
 
   useInterval(() => {
-    if (numCreditos < 500) {
+    if (conteoTerminado && numCreditos < 500) {
       setNumCreditos(numCreditos + 1);
     }
-  }, 50);
+  }, 1);
 
   return (
-    <section className="py-10 px-8" onMouseEnter={() => {setNumSoat(0); setNumCreditos(0)}}>
+    <section className="py-10 px-8" onMouseEnter={() => {setConteoTerminado(true)}}>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto items-center">
         <Image
           width={256}

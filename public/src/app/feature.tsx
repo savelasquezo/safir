@@ -4,39 +4,25 @@ import React from "react";
 import { Typography } from "@material-tailwind/react";
 
 import {
+  DocumentCheckIcon,
   IdentificationIcon,
-  CursorArrowRaysIcon,
-  HeartIcon,
-  LightBulbIcon,
-  LockClosedIcon,
+  PresentationChartLineIcon,
 } from "@heroicons/react/24/solid";
 
 import FeatureCard from "../components/feature-card";
 
 const FEATURES = [
   {
-    icon: CursorArrowRaysIcon,
-    title: "Asesores Expertos",
+    icon: DocumentCheckIcon,
+    title: "Misión",
     children:
       "Encuentre el personal más capacitado, presto a solucionar cualquiera de sus inquietudes.",
   },
   {
-    icon: HeartIcon,
-    title: "Interacción Personalizada",
+    icon: PresentationChartLineIcon,
+    title: "Visión",
     children:
       "Siempre encontrará personas amables y serviciales, con respuestas claras a sus requerimientos.",
-  },
-  {
-    icon: LockClosedIcon,
-    title: "Logra tus metas",
-    children:
-      "Nuestros esfuerzos estarán enfocados a que cumpla con sus metas planeadas en el menor tiempo posible.",
-  },
-  {
-    icon: LightBulbIcon,
-    title: "Ideas renovadas",
-    children:
-      "Sabemos que el mundo cambia a diario, por eso nuestro equipo innova constantemente para ofrecerle lo mejor a nuestros clientes.",
   },
 ];
 

@@ -12,20 +12,23 @@ const TESTIMONIALS = [
     client: "SOAT",
     title: "",
     img: "/image/avatar1.png",
+    route: "/soat",
   },
   {
     feedback:
       "Para independientes y empleados con buen historial de crédito.",
-    client: "El Credimillón",
-    title: "Un millón en una hora",
+    client: "Líneas de Crédito",
+    title: "",
     img: "/image/avatar2.jpg",
+    route: "/credito",
   },
   {
     feedback:
-      "Crédito dirigido a personas independientes o empleados con reportes menores en data crédito.",
-    client: "Crédito SAFIR",
+      "Conozca lo que se necesita para hacer uso de nuestros excelentes servicios.",
+    client: "Términos y Condiciones",
     title: "",
     img: "/image/avatar3.jpg",
+    route: "/terminos",
   },
 ];
 /* const TESTIMONIALS = [

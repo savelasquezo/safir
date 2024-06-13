@@ -82,9 +82,9 @@ export function Navbar() {
             isScrolling ? "text-gray-900" : "text-white"
           }`}
         >
-          <NavItem href="#">Inicio</NavItem>
-          <NavItem href="#servicios">Servicios</NavItem>
-          <NavItem href="#quienes-somos">¿Quiénes somos?</NavItem>
+          <NavItem href="/#">Inicio</NavItem>
+          <NavItem href="/#servicios">Servicios</NavItem>
+          <NavItem href="/#quienes-somos">¿Quiénes somos?</NavItem>
           <NavItem href="#fin">Contáctanos</NavItem>
         </ul>
         <div className="hidden gap-2 lg:flex lg:items-center">
@@ -133,9 +133,9 @@ export function Navbar() {
       <Collapse open={open}>
         <div className="container mx-auto mt-4 rounded-lg border-t border-blue-gray-50 bg-white px-6 py-5">
           <ul className="flex flex-col gap-4 text-blue-gray-900">
-            <NavItem href="#" setOpen={setOpen}>Inicio</NavItem>
-            <NavItem href="#servicios" setOpen={setOpen}>Servicios</NavItem>
-            <NavItem href="#quienes-somos" setOpen={setOpen}>¿Quiénes somos?</NavItem>
+            <NavItem href="/#" setOpen={setOpen}>Inicio</NavItem>
+            <NavItem href="/#servicios" setOpen={setOpen}>Servicios</NavItem>
+            <NavItem href="/#quienes-somos" setOpen={setOpen}>¿Quiénes somos?</NavItem>
             <NavItem href="#fin" setOpen={setOpen}>Contáctanos</NavItem>
           </ul>
           <div className="mt-4 flex items-center gap-2">

@@ -1,21 +1,19 @@
 import React from "react";
-import { Typography, Card, CardBody, CardHeader, Button } from "@material-tailwind/react";
+import { Typography, Card, CardBody, CardHeader } from "@material-tailwind/react";
 
-interface ProductsCardProps {
+interface SoatItemsCardProps {
   img: string;
   feedback: string;
   client: string;
   title: string;
-  route: string;
 }
 
-export function ProductsCard({
+export function SoatItemsCard({
   img,
   feedback,
   client,
   title,
-  route,
-}: ProductsCardProps) {
+}: SoatItemsCardProps) {
   return (
     <Card shadow={true} className="items-center text-center">
       <CardHeader floated={false} className="">
@@ -34,14 +32,9 @@ export function ProductsCard({
         >
           {feedback}
         </Typography>
-        <a href={route}>
-          <Button color="gray" size="sm" className="ml-auto">
-            Saber más
-          </Button>
-        </a>
       </CardBody>
     </Card>
   );
 }
 
-export default ProductsCard;
+export default SoatItemsCard;

@@ -4,7 +4,7 @@ import React from "react";
 import { Typography, IconButton, Button, Input, Textarea } from "@material-tailwind/react";
 // import { UserPlusIcon } from "@heroicons/react/24/solid";
 // import { ArrowRightOnRectangleIcon } from "@heroicons/react/24/solid";
-import { ChatBubbleLeftRightIcon, MapPinIcon } from "@heroicons/react/24/solid";
+import { BanknotesIcon, ChatBubbleLeftRightIcon, MapPinIcon } from "@heroicons/react/24/solid";
 
 
 const CURRENT_YEAR = new Date().getFullYear();
@@ -177,6 +177,25 @@ export function Footer() {
             <Typography color="white" className="mb-8 font-normal">
               Chinchiná desde carrera 8 hacia barrios Nuevo Horizonte, Mirador, La Pista, La Frontera, El Edén, El Lago.
             </Typography>
+            <div className="mb-4 flex h-12 w-12 items-center rounded-lg bg-gray-900 text-white ">
+              <BanknotesIcon className="h-6 w-6" />
+            </div>
+            <Typography
+              variant="h4"
+              color="white"
+              className="mb-4"
+            >
+              MEDIOS DE PAGO:
+            </Typography>
+            <Typography color="white" className="mb-4 font-normal">
+              Nequi 3126067813.
+            </Typography>
+            <Typography color="white" className="mb-4 font-normal">
+              Cuenta Ahorro Bancolombia 706-000018-42.
+            </Typography>
+            <Typography color="white" className="mb-4 font-normal">
+              Oficina: Cra. 8 # 9-07 segundo piso.
+            </Typography>
           </div>
         </div>
         <div className="mt-16 flex flex-wrap items-center justify-center gap-y-4 gap-x-8 border-t border-gray-700 py-7 md:justify-between">
@@ -184,7 +203,7 @@ export function Footer() {
             <li key={1}>
               <Typography
                 as="a"
-                href="#"
+                href="/#"
                 color="white"
                 className={`py-1 font-medium transition-colors pr-3`}
               >
@@ -194,7 +213,7 @@ export function Footer() {
             <li key={2}>
               <Typography
                 as="a"
-                href="#servicios"
+                href="/#servicios"
                 color="white"
                 className={`py-1 font-medium transition-colors px-3`}
               >
@@ -204,7 +223,7 @@ export function Footer() {
             <li key={3}>
               <Typography
                 as="a"
-                href="#quienes-somos"
+                href="/#quienes-somos"
                 color="white"
                 className={`py-1 font-medium transition-colors px-3`}
               >
@@ -227,7 +246,7 @@ export function Footer() {
             className="text-center font-normal opacity-75"
           >
             &copy; {CURRENT_YEAR} {" "}
-            <a href="#" target="_blank">
+            <a href="/#">
               SAFIR.
             </a>{" "}
             Todos los derechos reservados.{" "}
@@ -243,14 +262,6 @@ export function Footer() {
             <IconButton variant="text" color="white">
               <i className="fa-brands fa-instagram text-2xl not-italic opacity-75"></i>
             </IconButton>
-            { /*
-            <IconButton variant="text" color="white">
-              <i className="fa-brands fa-github text-2xl not-italic opacity-75"></i>
-            </IconButton>
-            <IconButton variant="text" color="white">
-              <i className="fa-brands fa-dribbble text-2xl not-italic opacity-75"></i>
-            </IconButton>
-            */ }
           </div>
         </div>
       </div>

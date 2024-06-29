@@ -6,3 +6,5 @@ class SrcConfig(AppConfig):
     name = 'apps.src'
     verbose_name = ''
 
+    def ready(self):
+        from . import signals

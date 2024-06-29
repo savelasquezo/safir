@@ -1,98 +1,61 @@
-"use client";
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
-import React from "react";
-import { Typography, Card, CardHeader, CardBody } from "@material-tailwind/react";
-import { Carousel } from "@material-tailwind/react";
+const FAQS: React.FC = () => {
+  const [faqs, setFaqs] = useState<{ id: number; question: string; answer: string }[]>([]);
 
-const FAQS = [
-  {
-    title: "¿Qué necesito para acceder a los servicios?",
-    desc: "Si es trabajador independiente que pueda demostrar al menos 3 mese de funcionamiento y constancia en su negocio, con edad superios a 20 años y de fácil ubicación.",
-  },
-  {
-    title: "¿Necesitas mejorar tu puntaje e historial crediticio?",
-    desc: "Aquí te brindamos toda la información y la asesoría pertinente para que puedas mejorar tanto tu puntaje como historial crediticio.",
-  },
-  {
-    title: "¿Necesitas resolver problemas en mora, que no sabes quién te ha reportado?",
-    desc: "En SAFIR también te damos el servicio de asesoría financiera y jurídica para que puedas resolver tus reportes en mora y así mejorar tu vida crediticia.",
-  },
-];
+  useEffect(() => {
+    const fetchFaqs = async () => {
+      try {
+        const response = await axios.get(`${process.env.NEXT_PUBLIC_APP_API_URL}/app/v1/mannager/fetch-faqs/`);
+        const activeFaqs = response.data.results.filter((faq: any) => faq.is_active);
+        setFaqs(activeFaqs);
+      } catch (error) {
+        console.error('Error fetching FAQs:', error);
+      }
+    };
 
-export function Faqs() {
+    fetchFaqs();
+  }, []);
+
   return (
-    <section className="px-8">
-      <div className="flex justify-center items-center">
-        <Carousel transition={{ duration: 1 }} loop={true} className="rounded-xl max-w-lg max-h-lg"
-            navigation={({ setActiveIndex, activeIndex, length }) => (
-              <div className="absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2">
-                {new Array(length).fill("").map((_, i) => (
-                  <span
-                    key={i}
-                    className={`block h-1 cursor-pointer rounded-2xl transition-all content-[''] ${
-                      activeIndex === i ? "w-8 bg-white" : "w-4 bg-white/50"
-                    }`}
-                    onClick={() => setActiveIndex(i)}
-                  />
-                ))}
-              </div>
-            )}
-          >
-          <img
-            src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80"
-            alt="image 1"
-            className="h-full w-full object-cover"
-          />
-          <img
-            src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80"
-            alt="image 2"
-            className="h-full w-full object-cover"
-          />
-          <img
-            src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80"
-            alt="image 3"
-            className="h-full w-full object-cover"
-          />
-        </Carousel>
-      </div>
-      <div className="container max-w-6xl mx-auto py-20">
-        <div className="text-center">
-          <Typography variant="h1" color="blue-gray" className="mb-4">
+    <section className="py-10 bg-gray-50 sm:py-16 lg:py-24">
+      <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+        <div className="max-w-2xl mx-auto text-center">
+          <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">
             Preguntas Frecuentes
-          </Typography>
-          <Typography
-            variant="lead"
-            className="mx-auto mb-10 !text-gray-700 lg:w-3/5"
-          >
-            Si necesita una mejor asesoría, no dude en contactarnos.
-          </Typography>
+          </h2>
         </div>
-
-        <div className="grid gap-10 md:grid-cols-1 lg:grid-cols-1">
-          {FAQS.map(({ title, desc }) => (
-            <Card key={title} shadow={false} color="transparent" className="w-full flex-row border-2 border-gray-500 hover:scale-110">
-              <CardHeader
-                shadow={false}
-                floated={false}
-                className="m-2 w-2/5 shrink-0 rounded-r-none pt-6"
+        <div className="flex flex-col justify-center items-center gap-y-4 w-full mx-auto mt-8 md:mt-16">
+          {faqs.map((faq) => (
+            <Accordion key={faq.id} className="w-full">
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls={`panel${faq.id}-content`}
+                id={`panel${faq.id}-header`}
+                className='text-xl font-semibold'
               >
-              <Typography color="blue-gray" className="pb-6 text-justify" variant="h4">
-                {title}
-              </Typography>
-              </CardHeader>
-              <CardBody>
-                <div className="pt-0">
-                  <Typography className="font-normal !text-gray-600 text-justify">
-                    {desc}
-                  </Typography>
-                </div>
-              </CardBody>
-            </Card>
+                {faq.question}
+              </AccordionSummary>
+              <AccordionDetails>
+                {faq.answer}
+              </AccordionDetails>
+            </Accordion>
           ))}
         </div>
+        <p className="text-center text-gray-600 text-base mt-9">
+          ¿Todavía tienes preguntas?{' '}
+          <span className="cursor-pointer font-medium text-tertiary transition-all duration-200 hover:text-tertiary focus:text-tertiary hover:underline">
+            Contacta con nuestro soporte
+          </span>
+        </p>
       </div>
     </section>
   );
-}
+};
 
-export default Faqs;
+export default FAQS;

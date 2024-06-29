@@ -205,7 +205,7 @@ STATICFILES_DIRS = [BASE_DIR/"static"]
 MEDIA_ROOT = os.path.join(BASE_DIR, '')
 MEDIA_URL = '/'
 
-AUTH_USER_MODEL = "src.Account"
+AUTH_USER_MODEL = "src.Accounts"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
@@ -213,10 +213,13 @@ AUTH_USER_MODEL = "src.Account"
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 REST_FRAMEWORK = {
-   'DEFAULT_AUTHENTICATION_CLASSES': (
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10,
+    'DEFAULT_AUTHENTICATION_CLASSES': (
        'rest_framework_simplejwt.authentication.JWTAuthentication',
-   ),
+    ),
 }
+
 
 LOGIN_REDIRECT_URL = "/"
 LOGOUT_REDIRECT_URL = "/"

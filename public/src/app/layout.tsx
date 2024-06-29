@@ -1,4 +1,4 @@
-import "@/css/globals.css";
+import "@/css/styles.css";
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import { FixedPlugin } from "@/components/fixed-plugin";
@@ -13,7 +13,7 @@ const roboto = Roboto({
 export const metadata: Metadata = {
   title: "Safir",
   description:
-    "Safir",
+    "Asesorias-Safir",
 };
 
 export default function RootLayout({
@@ -31,6 +31,7 @@ export default function RootLayout({
           crossOrigin="anonymous"
           referrerPolicy="no-referrer"
         />
+        <link rel="icon" href="favicon.ico" />
       </head>
       <body className={roboto.className}>
         <Layout>

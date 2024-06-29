@@ -77,12 +77,8 @@ export function MobileConvenience() {
           </Typography>
 
           <div className="col-span-2 grid gap-5 grid-cols-2 ">
-            <InfoCard key={10} title={`${numSoat.toString()} +`}>
-              {"SOAT expedidos"}
-            </InfoCard>
-            <InfoCard key={50} title={`${numCreditos.toString()} +`}>
-              {"Créditos desembolsados"}
-            </InfoCard>
+            <InfoCard key={10} title={`${numSoat.toString()} +`}>{"SOAT expedidos"}</InfoCard>
+            <InfoCard key={50} title={`${numCreditos.toString()} +`}>{"Créditos desembolsados"}</InfoCard>
             {OPTIONS.map(({ title, description }) => (
               <InfoCard key={title} title={title}>
                 {description}

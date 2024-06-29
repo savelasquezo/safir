@@ -1,46 +1,22 @@
 import React from "react";
 import { Typography, Card, CardBody, CardHeader, Button } from "@material-tailwind/react";
 
-interface ProductsCardProps {
-  img: string;
-  feedback: string;
-  client: string;
-  title: string;
-  route: string;
-}
+import { ItemsCardProps } from '@/lib/types/types';
 
-export function ProductsCard({
-  img,
-  feedback,
-  client,
-  title,
-  route,
-}: ProductsCardProps) {
+const ProductsCard: React.FC<ItemsCardProps> = ({ img, feedback, client, title, route }) => {
   return (
-    <Card shadow={true} className="items-center text-center">
-      <CardHeader floated={false} className="">
-        <img src={img} alt="picture" />
-      </CardHeader>
-      <CardBody>
-        <Typography variant="h4" color="blue-gray">
-          {client}
-        </Typography>
-        <Typography variant="small" className="mb-2 font-medium !text-gray-700">
-          {title}
-        </Typography>
-        <Typography
-          variant="paragraph"
-          className="mb-5 font-normal !text-gray-800 text-justify"
-        >
-          {feedback}
-        </Typography>
-        <a href={route}>
-          <Button color="gray" size="sm" className="ml-auto">
-            Saber más
-          </Button>
-        </a>
-      </CardBody>
-    </Card>
+    <a href={route} className="shadow-2xl hover:scale-105 transition-transform duration-500">
+      <Card shadow={true} className="items-center text-center">
+        <CardHeader floated={false} className=""><img src={img} alt="" /></CardHeader>
+        <CardBody>
+          <Typography variant="h4" color="blue-gray">{client}</Typography>
+          <Typography variant="small" className="mb-2 font-medium !text-gray-700">{title}</Typography>
+          <Typography variant="paragraph" className="mb-5 font-normal !text-gray-800 text-justify">
+            {feedback}
+          </Typography>
+        </CardBody>
+      </Card>
+    </a>
   );
 }
 

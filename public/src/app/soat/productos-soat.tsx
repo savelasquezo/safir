@@ -10,21 +10,21 @@ const ITEMS = [
       "Financia el SOAT de tu carro, moto o cualquier otro vehículo rápido y sin complicaciones.",
     client: "SOAT",
     title: "",
-    img: "/image/avatar1.png",
+    img: "/image/soat1.webp",
   },
   {
     feedback:
       "Para renovación o primera vez, no dude en contactarnos y continúa con tu movilidad sin preocupaciones.",
     client: "Licencia de conducción",
     title: "",
-    img: "/image/licencia1.png",
+    img: "/image/soat2.webp",
   },
   {
     feedback:
       "Si necesita pagar multas de tránsito o cualquier otro servicio vehicular, sólo acérquese a nosotros y permítanos colaborarle.",
     client: "Otros trámites",
     title: "",
-    img: "/image/tramites1.png",
+    img: "/image/soat3.webp",
   },
 ];
 

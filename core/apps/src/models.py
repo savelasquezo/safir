@@ -26,7 +26,7 @@ class AccountManager(BaseUserManager):
         return self.create_user(email, password, **extra_fields)
 
 
-class Account(AbstractBaseUser, PermissionsMixin):
+class Accounts(AbstractBaseUser, PermissionsMixin):
     id = models.UUIDField(_("ID"),default=uuid.uuid4, unique=True, primary_key=True)
     email = models.EmailField(_("Email"),unique=True)
     username = models.CharField(_("Usuario"),max_length=64, unique=True)
@@ -49,8 +49,17 @@ class Account(AbstractBaseUser, PermissionsMixin):
         verbose_name_plural = _("Accounts")
 
 
-class Core(models.Model):
+class Settings(models.Model):
     default = models.CharField(_("XConfigSafir"), max_length=32, unique=True, blank=True, null=True, default="XConfigSafir")
+
+    nit = models.CharField(_("NIT"), max_length=64, blank=True, null=True)
+    phone = models.CharField(_("Telefono"), max_length=64, blank=True, null=True)
+    email = models.EmailField(_("Correo"), max_length=254, blank=True, null=True)
+    address = models.CharField(_("Address"), max_length=64, blank=True, null=True)
+
+    twitter = models.URLField(_("Twitter"), max_length=128, blank=True, null=True)
+    facebook = models.URLField(_("Facebook"), max_length=128, blank=True, null=True)
+    instagram = models.URLField(_("Instagram"), max_length=128, blank=True, null=True)
 
     def __str__(self):
         return f"{self.default}"
@@ -61,8 +70,10 @@ class Core(models.Model):
 
 class ImagenSlider(models.Model):
 
-    settings = models.ForeignKey(Core, on_delete=models.CASCADE)
+    settings = models.ForeignKey(Settings, on_delete=models.CASCADE)
     file = models.ImageField(_("Imagen"), upload_to=ImageUploadTo, max_length=32, null=True, blank=True, help_text="Width-(1340px) - Height-(500px)")
+    is_active = models.BooleanField(default=True, verbose_name='')
+    
     def __str__(self):
         return f"{self.id}"
 
@@ -70,6 +81,19 @@ class ImagenSlider(models.Model):
         verbose_name = _("Imagen")
         verbose_name_plural = _("Images")
 
+class FAQs(models.Model):
+
+    settings = models.ForeignKey(Settings, on_delete=models.CASCADE)
+    question = models.CharField(_("Titulo"),max_length=64, null=False, blank=False)
+    answer = models.TextField(_("Descripcion"),max_length=1024, null=False, blank=False)
+    is_active = models.BooleanField(default=True, verbose_name='')
+
+    def __str__(self):
+        return f"{self.id}"
+
+    class Meta:
+        verbose_name = _("FAQ")
+        verbose_name_plural = _("FAQs")
 
 class Messages(models.Model):
 
@@ -80,7 +104,7 @@ class Messages(models.Model):
     )
     
     id = models.AutoField(primary_key=True, verbose_name="ID")
-    account = models.ForeignKey(Account, on_delete=models.CASCADE)
+    account = models.ForeignKey(Accounts, on_delete=models.CASCADE)
     first_name = models.CharField(_("Nombre"), max_length=64, blank=True)
     last_name = models.CharField(_("Apellido"), max_length=64, blank=True)
     email = models.EmailField(_("Email"), unique=True, null=False, blank=False)

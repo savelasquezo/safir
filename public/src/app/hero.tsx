@@ -2,9 +2,6 @@
 
 import Image from "next/image";
 import { Button, Typography } from "@material-tailwind/react";
-// import { UserPlusIcon } from "@heroicons/react/24/solid";
-// import { ArrowRightOnRectangleIcon } from "@heroicons/react/24/solid";
-
 
 function Hero() {
   return (
@@ -13,38 +10,11 @@ function Hero() {
         <div className="container mx-auto mt-32 grid h-full w-full grid-cols-1 place-items-center lg:mt-14 lg:grid-cols-2">
           <div className="col-span-1">
             <Typography variant="h1" color="white" className="mb-4">
-              Servicios Fintech <br /> Hechos a su Medida
+              Asesorias Safir
             </Typography>
-            <Typography
-              variant="lead"
-              className="mb-7 !text-white md:pr-16 xl:pr-28"
-            >
+            <Typography variant="lead" className="mb-7 !text-white md:pr-16 xl:pr-28">
               Servicio de Asesorías y Fortalecimiento a independientes
-              de la Región.
             </Typography>
-            { /*
-            <Typography className="mb-4" color="white" variant="h6">
-              ¿Qué deseas hacer?
-            </Typography>
-            <div className="flex flex-col gap-2 md:mb-2 md:w-10/12 md:flex-row">
-              <Button
-                size="lg"
-                color="white"
-                className="flex justify-center items-center gap-3"
-              >
-                <ArrowRightOnRectangleIcon className="h-6 w-6" />
-                Iniciar Sesión
-              </Button>
-              <Button
-                size="lg"
-                color="white"
-                className="flex justify-center items-center gap-3"
-              >
-                <UserPlusIcon className="h-6 w-6" />
-                Registrarme
-              </Button>
-            </div>
-             */ }
           </div>
           <Image
             width={470}

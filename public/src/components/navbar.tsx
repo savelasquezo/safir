@@ -69,11 +69,11 @@ export function Navbar() {
       className="fixed top-0 z-50 border-0"
     >
       <div className="container mx-auto flex items-center justify-between">
-        <div className="bg-white">
+        <div>
           <Image
             width={86}
             height={41}
-            src="/logos/logo_safir.png"
+            src="/logos/logo_safir.webp"
             alt="$AFIR"
           />
         </div>

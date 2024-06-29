@@ -1,9 +1,9 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 
-from apps.src.models import Account
+import apps.src.models as model
 
-class MyAdminSite(admin.AdminSite):
+class AdminSafir(admin.AdminSite):
     index_title = 'Consola Administrativa'
     verbose_name = "Safir"
 
@@ -21,12 +21,11 @@ class MyAdminSite(admin.AdminSite):
 
         return app_list
 
-admin_site = MyAdminSite()
+admin_site = AdminSafir()
 admin.site = admin_site
 admin_site.site_header = "Safir"
 
-
-class AccountAdmin(BaseUserAdmin):
+class AccountsAdmin(BaseUserAdmin):
     list_display = ('username', 'email')
     search_fields = ('username', 'email')
 
@@ -52,4 +51,55 @@ class AccountAdmin(BaseUserAdmin):
         return ['username','email']
 
 
-admin.site.register(Account, AccountAdmin)
+
+class ImagenSliderInline(admin.StackedInline):
+    
+    model = model.ImagenSlider
+    extra = 0
+    fieldsets = ((" ", {"fields": (("file","is_active"),)}),)
+    
+class FAQsInline(admin.StackedInline):
+    
+    model = model.FAQs
+    extra = 0
+    fieldsets = ((" ", {"fields": (("question","is_active"),"answer")}),)
+
+class SettingsAdmin(admin.ModelAdmin):
+
+    inlines = [ImagenSliderInline, FAQsInline]
+    
+    list_display = (
+        "default",
+        "email",
+        "phone",
+        "address",
+        )
+
+    fConfig = {"fields": (
+        ("nit","phone"),
+        ("email","address"),
+        )}
+
+    fSocial = {"fields": (
+        "twitter",
+        "facebook",
+        "instagram",
+        )}
+
+    fieldsets = (
+        ("", fConfig),
+        ("Social/Media", fSocial),
+        )
+
+    def has_delete_permission(self, request, obj=None):
+        return False
+    
+    def has_add_permission(self, request):
+        return False if model.Settings.objects.exists() else True
+
+    readonly_fields=['default',]
+
+
+
+admin.site.register(model.Accounts, AccountsAdmin)
+admin.site.register(model.Settings, SettingsAdmin)

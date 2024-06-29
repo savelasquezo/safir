@@ -13,7 +13,9 @@ import Feature from "./feature";
 import MobileConvenience from "./mobile-convenience";
 import Products from "./productos";
 import Testimonials from "./testimonials";
-import Faqs from "./faqs";
+import Slider from "./slider";
+import FAQS from "./faqs";
+
 
 export default function Home() {
   return (
@@ -26,7 +28,8 @@ export default function Home() {
         <MobileConvenience />
         <VideoIntro />
         <Testimonials />
-        <Faqs />
+        <Slider />
+        <FAQS />
         <Footer />
       </>
     </SessionProvider>

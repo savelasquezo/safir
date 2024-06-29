@@ -35,8 +35,15 @@ DEBUG = True if DEBUG == "True" else False
 
 ALLOWED_HOSTS = ["*"]
 
+ALLOWED_HOSTS = ["*"]
 CORS_ALLOW_ALL_ORIGINS = True
+
 CORS_DEBUG = os.getenv('DEBUG')
+CORS_DEBUG = True if CORS_DEBUG == "True" else False
+
+DEBUG_PROPAGATE_EXCEPTIONS = True
+CORS_ALLOW_REQUESTS_FROM_NO_REFERER = True
+
 
 # Logging File
 LOGGING = {
@@ -267,6 +274,13 @@ DATA_UPLOAD_MAX_MEMORY_SIZE = 52428800
 FILE_UPLOAD_MAX_MEMORY_SIZE = 52428800
 
 if not DEBUG:
+    #SECURE_SSL_REDIRECT = True
+    CSRF_COOKIE_SECURE = True
+    SESSION_COOKIE_SECURE = True
+    CORS_ALLOW_ALL_ORIGINS = False
+    ALLOWED_HOSTS = ['asesoriasafir.com', 'localhost', '127.0.0.1']
+    CORS_ALLOWED_ORIGINS = ['https://asesoriasafir.com']
+    CSRF_TRUSTED_ORIGINS = ['https://asesoriasafir.com']
     EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
     EMAIL_HOST = 'smtp.hostinger.com'
     EMAIL_HOST_USER = 'noreply@asesoriasafir.com'
@@ -275,6 +289,6 @@ if not DEBUG:
     EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
     EMAIL_USE_SSL = True
     EMAIL_PORT = 465
-
     MEDIA_URL = '/media/'
-    MEDIA_ROOT = '/var/www/zoex/media/'
+    MEDIA_BASE = '/var/www/asesoriasafir'
+    MEDIA_ROOT = '/var/www/asesoriasafir/media/'

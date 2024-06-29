@@ -7,22 +7,22 @@ import SoatItemsCard from "../../components/soat-card";
 const ITEMS = [
   {
     feedback:
-      "Financia el SOAT de tu carro, moto o cualquier otro vehículo rápido y sin complicaciones.",
-    client: "SOAT",
+      "Financia el SOAT y el Tecno de tu carro, moto o cualquier otro vehículo rápido y sin complicaciones.",
+    client: "SOAT Y Tecnomecanica",
     title: "",
     img: "/image/soat1.webp",
   },
   {
     feedback:
       "Para renovación o primera vez, no dude en contactarnos y continúa con tu movilidad sin preocupaciones.",
-    client: "Licencia de conducción",
+    client: "Licencias",
     title: "",
     img: "/image/soat2.webp",
   },
   {
     feedback:
       "Si necesita pagar multas de tránsito o cualquier otro servicio vehicular, sólo acérquese a nosotros y permítanos colaborarle.",
-    client: "Otros trámites",
+    client: "Otros Trámites",
     title: "",
     img: "/image/soat3.webp",
   },
@@ -43,7 +43,7 @@ export function ProductosSoat() {
               Nuestros Productos
             </Typography>
           </div>
-          <div className="grid grid-cols-1 gap-x-8 gap-y-12 md:grid-cols-3 lg:px-20">
+          <div className="grid grid-cols-1 gap-x-8 gap-y-12 md:grid-cols-3 lg:px-20 uppercase">
             {ITEMS.map((props, key) => (
               <SoatItemsCard key={key} {...props} />
             ))}

@@ -75,6 +75,7 @@ export function Navbar() {
             height={41}
             src="/logos/logo_safir.webp"
             alt="$AFIR"
+            className="scale-150"
           />
         </div>
         <ul

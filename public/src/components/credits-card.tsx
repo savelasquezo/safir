@@ -20,7 +20,7 @@ export function CreditItemsCard({
         <img src={img} alt="picture" />
       </CardHeader>
       <CardBody>
-        <Typography variant="h4" color="blue-gray">
+        <Typography variant="h4" color="blue-gray" className="uppercase">
           {client}
         </Typography>
         <Typography variant="small" className="mb-2 font-medium !text-gray-700">

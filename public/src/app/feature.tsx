@@ -23,9 +23,9 @@ export function Features() {
             </svg>
         </span>
             <h1 className="my-1 gradient-red text-base uppercase tracking-wide">Mision</h1>
-            <p className="py-2 text-center">Some of the components require fews modifications in your Tailwind config or
-                CSS file. I obviously give you these instructions alongside the code to make sure the components work
-                perfectly.</p>
+            <p className="py-2 text-center">Nuestra misión es fomentar la inclusión financiera y el desarrollo socioeconómico, ofreciendo préstamos, 
+              financiamiento y asesorías a independientes y empleados, por medio de herramientas tecnológicas y soluciones financieras accesibles e 
+              inmediatas para que las personas puedan cumplir alcanzar sus objetivos en el corto plazo..</p>
         </div>
         <div
             className="col-span-4 sm:col-span-2 lg:col-span-1 relative px-5 pt-10 pb-2 flex flex-col justify-start items-center border-2 border-gray-600 rounded-xl text-gray-600">
@@ -38,15 +38,16 @@ export function Features() {
             </svg>
         </span>
             <h1 className="my-1 gradient-red text-base uppercase tracking-wide">Vision</h1>
-            <p className="py-2 text-center">Some of the components require fews modifications in your Tailwind config or
-                CSS file. I obviously give you these instructions alongside the code to make sure the components work
-                perfectly.</p>
+            <p className="py-2 text-center">Consolidarnos en la región como un modelo de préstamos, financiamiento y educación financiera que vaya a
+               la vanguardia de las nuevas tecnologías y herramientas (Fintech) siendo un referente en el impulso de la inclusión y la educación 
+               financiera, mejorando así la calidad de vida de todos los que son desatendidos por el sector financiero tradicional..</p>
         </div>
+        <p className="font-samiya">Transformar vidas y comunidades, empoderando a individuos y pequeños negocios para que alcancen su bienestar y desarrollo económico sostenible.</p>
       </div>
       <div className="container mx-auto mt-20 mb-10 text-center" id="quienes-somos">
         <div className="flex w-full flex-col items-center">
           <Typography variant="h2" color="blue-gray" className="mb-8">
-            <strong>SAFIR</strong> CON MODALIDAD DE UNA FINTECH
+            <strong>SAFIR CON MODALIDAD FINTECH</strong>
           </Typography>
         </div>
         <Typography variant="lead" className=" !text-gray-800 text-center">

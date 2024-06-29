@@ -10,10 +10,10 @@ function Hero() {
         <div className="container mx-auto mt-32 grid h-full w-full grid-cols-1 place-items-center lg:mt-14 lg:grid-cols-2">
           <div className="col-span-1">
             <Typography variant="h1" color="white" className="mb-4">
-              Asesorias Safir
+              Safir
             </Typography>
             <Typography variant="lead" className="mb-7 !text-white md:pr-16 xl:pr-28">
-              Servicio de Asesorías y Fortalecimiento a independientes
+              Servicio de Asesorías y Fortalecimiento a empleados e independientes de la regiion.
             </Typography>
           </div>
           <Image
@@ -36,8 +36,8 @@ function Hero() {
           >
             Es una empresa de servicios de asesoría y fortalecimiento a personas que
             trabajan de forma independiente en negocios de servicio, comercio o producción.
-            También atendemos empleados informales que no tienen la posibilidad de acceder
-            a un préstamo bancario, dando la opción de hacer vida crediticia con nuestro crédito.
+            También atendemos empleados formales e informales que no tienen la posibilidad de acceder
+            a un préstamo bancario, brindando la opción de hacer historial de crédito con nuestro productos.
           </Typography>
         </div>
       </div>

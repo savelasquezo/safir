@@ -8,8 +8,8 @@ import ProductsCard from "../components/product-card";
 const TESTIMONIALS = [
   {
     feedback:
-      "Financia el SOAT de tu carro o moto, rápido y sin complicaciones.",
-    client: "SOAT",
+      "Financia el SOAT y Tecno de tu carro o moto, rápido y sin complicaciones.",
+    client: "SOAT y Tecnomecanica",
     title: "",
     img: "/image/soat1.webp",
     route: "/soat",
@@ -24,7 +24,7 @@ const TESTIMONIALS = [
   },
   {
     feedback:
-      "Conozca lo que se necesita para hacer uso de nuestros excelentes servicios.",
+      "Un millón en una hora, cupo rotativo dirigido a personas con historial crediticio positivo.",
     client: "Credimillon",
     title: "",
     img: "/image/credimillon1.webp",

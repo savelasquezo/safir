@@ -2,10 +2,6 @@
 
 import React from "react";
 import { Typography, IconButton, Button, Input, Textarea } from "@material-tailwind/react";
-// import { UserPlusIcon } from "@heroicons/react/24/solid";
-// import { ArrowRightOnRectangleIcon } from "@heroicons/react/24/solid";
-import { BanknotesIcon, ChatBubbleLeftRightIcon, MapPinIcon } from "@heroicons/react/24/solid";
-
 
 const CURRENT_YEAR = new Date().getFullYear();
 
@@ -14,10 +10,6 @@ export function Footer() {
   const [email, setEmail] = React.useState("");
   const [subject, setSubject] = React.useState("");
   const [message, setMessage] = React.useState("");
-  
-  //const [deshabilitado, setDeshabilitado] = React.useState(false);
-  // const handleDeshabilitar = () => setDeshabilitado(true);
-  // const handleHabilitar = () => setDeshabilitado(false);
 
   const handleSubmit = async () => {
     console.log(email);
@@ -49,34 +41,16 @@ export function Footer() {
   return (
     <footer className="mt-10 pb-10 bg-gray-900 px-8 pt-12">
       <div className="container mx-auto" id="fin">
-        <div className="flex flex-wrap justify-center gap-8 md:justify-between">
-          <div className="text-center md:text-left">
-            <div className="mb-10 flex h-12 w-12 items-center rounded-lg bg-gray-900 text-white ">
-              <ChatBubbleLeftRightIcon className="h-6 w-6" />
-            </div>
-            <Typography
-              variant="h4"
-              color="white"
-              className="mb-4"
-            >
-              FORMULARIO DE CONTACTO:
-            </Typography>
+        <div className="flex flex-wrap justify-center gap-8">
+          <div className="w-1/3 text-center md:text-left">
             <form className="max-w-screen-lg sm:w-96">
               <div className="mb-1 flex flex-col gap-6">
-                <Typography variant="h6" color="white" className="-mb-3">
-                  Correo
-                </Typography>
-                <Input
-                  size="lg"
-                  type="email"
-                  id="email"
-                  value={email}
+                <Typography variant="h6" color="white" className="-mb-3">Correo</Typography>
+                <Input size="lg" type="email" id="email" value={email} className=" !border-blue-gray-300 focus:!border-gray-100" color="white"
                   onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
                     setEmail(event.target.value);
                   }}
                   placeholder="nombre@mail.com"
-                  className=" !border-blue-gray-300 focus:!border-gray-100"
-                  color="white"
                   labelProps={{
                     className: "before:content-none after:content-none",
                   }}
@@ -124,78 +98,44 @@ export function Footer() {
                 Enviar
               </Button>
             </form>
-            { /*
-            <Typography variant="h6" color="white" className="mb-3">
-              ¿Qué deseas hacer?
-            </Typography>
-            <div className="flex flex-col gap-2">
-              <Button
-                color="white"
-                className="flex justify-center items-center gap-3"
-              >
-                <ArrowRightOnRectangleIcon className="h-6 w-6" />
-                Iniciar Sesión
-              </Button>
-              <Button
-                color="white"
-                className="flex justify-center items-center gap-3"
-              >
-                <UserPlusIcon className="h-6 w-6" />
-                Registrarme
-              </Button>
-            </div>
-          */ }
           </div>
-          <div className="mt-8 w-full md:mt-0 md:w-auto">
-            <div className="mb-10 flex h-12 w-12 items-center rounded-lg bg-gray-900 text-white ">
-              <MapPinIcon className="h-6 w-6" />
+          <div className="w-2/3 mt-8 flex flex-col justify-center gap-y-8 md:mt-0 md:w-auto">
+            <div className="flex flex-col">
+              <Typography color="white" className="mb-4 uppercase text-lg font-semibold">Horarios de Atencion:</Typography>
+              <span className="flex flex-row items-center justify-start">
+                <Typography color="white" className="mb-2 mx-4 uppercase font-semibold">Chinchina:</Typography>
+                <Typography color="white" className="mb-2 font-normal text-sm">
+                  Cra. 8 No. 9-07 -- Lunes a Sabado 8am a 6pm 
+                </Typography>
+              </span>
+              <span className="flex flex-row items-center justify-start">
+                <Typography color="white" className="mb-2 mx-4 uppercase font-semibold">Virtual:</Typography>
+                <Typography color="white" className="mb-2 font-normal text-sm">
+                  Whatsapp Lunes a Domingo 6am - 9pm
+                </Typography>
+              </span>
             </div>
-            <Typography
-              variant="h4"
-              color="white"
-              className="mb-4"
-            >
-              COBERTURA DE ATENCIÓN:
-            </Typography>
-            <Typography
-              variant="h5"
-              color="white"
-              className="mb-4"
-            >
-              ZONA 1:
-            </Typography>
-            <Typography color="white" className="mb-4 font-normal">
-              Chinchiná desde carrera 8 hacia barrios Túnel Departamental Milagros, San Martín, La Doctora, Guayacanes.
-            </Typography>
-            <Typography
-              variant="h5"
-              color="white"
-              className="mb-4"
-            >
-              ZONA 2:
-            </Typography>
-            <Typography color="white" className="mb-8 font-normal">
-              Chinchiná desde carrera 8 hacia barrios Nuevo Horizonte, Mirador, La Pista, La Frontera, El Edén, El Lago.
-            </Typography>
-            <div className="mb-4 flex h-12 w-12 items-center rounded-lg bg-gray-900 text-white ">
-              <BanknotesIcon className="h-6 w-6" />
+            <div className="flex flex-col">
+              <Typography color="white" className="mb-4 uppercase text-lg font-semibold">Medios Autorizados</Typography>
+              <span className="flex flex-row items-center justify-start">
+                <Typography color="white" className="mb-2 mx-4 uppercase font-semibold">Nequi </Typography>
+                <Typography color="white" className="mb-2 font-normal text-sm">
+                  3126067813
+                </Typography>
+              </span>
+              <span className="flex flex-row items-center justify-start">
+                <Typography color="white" className="mb-2 mx-4 uppercase font-semibold">Bancolombia:</Typography>
+                <Typography color="white" className="mb-2 font-normal text-sm">
+                  Cuenta de Ahorros No. 706-000018-42
+                </Typography>
+              </span>
+              <span className="flex flex-row items-center justify-start">
+                <Typography color="white" className="mb-2 mx-4 uppercase font-semibold">Oficina:</Typography>
+                <Typography color="white" className="mb-2 font-normal text-sm">
+                  Carrera 8 No. 9-07 Cooworking
+                </Typography>
+              </span>
             </div>
-            <Typography
-              variant="h4"
-              color="white"
-              className="mb-4"
-            >
-              MEDIOS DE PAGO:
-            </Typography>
-            <Typography color="white" className="mb-4 font-normal">
-              Nequi 3126067813.
-            </Typography>
-            <Typography color="white" className="mb-4 font-normal">
-              Cuenta Ahorro Bancolombia 706-000018-42.
-            </Typography>
-            <Typography color="white" className="mb-4 font-normal">
-              Oficina: Cra. 8 # 9-07 segundo piso.
-            </Typography>
           </div>
         </div>
         <div className="mt-16 flex flex-wrap items-center justify-center gap-y-4 gap-x-8 border-t border-gray-700 py-7 md:justify-between">

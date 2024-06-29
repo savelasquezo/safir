@@ -7,36 +7,29 @@ import CreditItemsCard from "../../components/credits-card";
 const ITEMS = [
   {
     feedback:
-      "Para independientes y empleados con buen historial de crédito.",
-    client: "El Credimillón",
-    title: "",
-    img: "/image/credimillon.png",
-  },
-  {
-    feedback:
       "Aplica para microempresarios con cualquier actividad económica de servicio, comercio o producción.",
-    client: "Crédito Independiente",
+    client: "Independiente",
     title: "",
     img: "/image/independiente.png",
   },
   {
     feedback:
-      "Dirigido a personas que trabajan en negocios comerciales y que no tienen acceso a un crédito formal.",
-    client: "Crédito Empleado",
+      "Dirigido a personas que trabajan en empresas o negocios comerciales y que no tienen acceso a un crédito formal.",
+    client: "Empleado",
     title: "",
     img: "/image/empleado.png",
   },
   {
     feedback:
-      "Crédito dirigido a personas independientes o empleados con reportes menores en centrales de riesgo por sector real o telecomunicaciones.",
-    client: "Crédito SAFIR",
+      "Dirigido a personas con reportes menores en centrales de riesgo por sector real o telecomunicaciones.",
+    client: "SAFIR",
     title: "",
     img: "/image/credsafir.png",
   },
   {
     feedback:
       "Para independientes o empleados sin historial de crédito, así podrás iniciar tu vida crediticia.",
-    client: "Crédito Oportunidad",
+    client: "Oportunidad",
     title: "",
     img: "/image/oportunidad.png",
   },

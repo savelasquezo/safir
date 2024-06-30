@@ -13,7 +13,7 @@ const Slider: React.FC = () => {
   useEffect(() => {
     const fetchImagenSliders = async () => {
       try {
-        const res = await axios.get<{ results: ImagenSlider[] }>(`${process.env.NEXT_PUBLIC_APP_API_URL}/app/v1/mannager/fetch-sliders/`, {
+        const res = await axios.get<{ results: ImagenSlider[] }>(`${process.env.NEXT_PUBLIC_APP_API_URL}/app/v1/manager/fetch-sliders/`, {
           headers: {
             'Content-Type': 'application/json',
           },

@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from 'react';
 import { Typography, IconButton, Button, Input, Textarea } from "@material-tailwind/react";
 
 const CURRENT_YEAR = new Date().getFullYear();
@@ -11,10 +11,26 @@ export function Footer() {
   const [subject, setSubject] = React.useState("");
   const [message, setMessage] = React.useState("");
 
+  const [adminAddress, setAdminAddress] = useState("");
+  const [adminNequi, setAdminNequi] = useState("");
+  const [adminBancolombia, setAdminBancolombia] = useState("");
+  const [adminAttention, setAdminAttention] = useState("");
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const address = localStorage.getItem("set_address");
+      const facebook = localStorage.getItem("set_facebook");
+      const bancolombia = localStorage.getItem("set_bancolombia");
+      const attention = localStorage.getItem("set_attention");
+
+      if (address) setAdminAddress(JSON.parse(address));
+      if (facebook) setAdminNequi(JSON.parse(facebook));
+      if (bancolombia) setAdminBancolombia(JSON.parse(bancolombia));
+      if (attention) setAdminAttention(JSON.parse(attention));
+    }
+  }, []);
+  
   const handleSubmit = async () => {
-    console.log(email);
-    console.log(subject);
-    console.log(message);
     try {
       const res = await fetch(`${process.env.NEXT_PUBLIC_APP_API_URL}/app/v1/accounts/send-message/`, 
       {
@@ -105,13 +121,13 @@ export function Footer() {
               <span className="flex flex-row items-center justify-start">
                 <Typography color="white" className="mb-2 mx-4 uppercase font-semibold">Chinchina:</Typography>
                 <Typography color="white" className="mb-2 font-normal text-sm">
-                  Cra. 8 No. 9-07 -- Lunes a Sabado 8am a 6pm 
+                  {adminAddress} -- {adminAttention}
                 </Typography>
               </span>
               <span className="flex flex-row items-center justify-start">
                 <Typography color="white" className="mb-2 mx-4 uppercase font-semibold">Virtual:</Typography>
                 <Typography color="white" className="mb-2 font-normal text-sm">
-                  Whatsapp Lunes a Domingo 6am - 9pm
+                  Whatsapp -- {adminAttention}
                 </Typography>
               </span>
             </div>
@@ -120,19 +136,19 @@ export function Footer() {
               <span className="flex flex-row items-center justify-start">
                 <Typography color="white" className="mb-2 mx-4 uppercase font-semibold">Nequi </Typography>
                 <Typography color="white" className="mb-2 font-normal text-sm">
-                  3126067813
+                  {adminNequi}
                 </Typography>
               </span>
               <span className="flex flex-row items-center justify-start">
                 <Typography color="white" className="mb-2 mx-4 uppercase font-semibold">Bancolombia:</Typography>
                 <Typography color="white" className="mb-2 font-normal text-sm">
-                  Cuenta de Ahorros No. 706-000018-42
+                  {adminBancolombia}
                 </Typography>
               </span>
               <span className="flex flex-row items-center justify-start">
                 <Typography color="white" className="mb-2 mx-4 uppercase font-semibold">Oficina:</Typography>
                 <Typography color="white" className="mb-2 font-normal text-sm">
-                  Carrera 8 No. 9-07 Cooworking
+                  {adminAddress}
                 </Typography>
               </span>
             </div>

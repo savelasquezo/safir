@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
 import Image from "next/image";
+
 import {
   Navbar as MTNavbar,
   Collapse,
@@ -7,6 +8,7 @@ import {
   Typography,
   Button,
 } from "@material-tailwind/react";
+
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 interface NavItemProps {
@@ -35,6 +37,10 @@ export function Navbar() {
   const [open, setOpen] = React.useState(false);
   const [isScrolling, setIsScrolling] = React.useState(false);
 
+  const [adminTitktok, setAdminTitktok] = useState("");
+  const [adminFacebook, setAdminFacebook] = useState("");
+  const [adminInstagram, setAdminInstagram] = useState("");
+
   function handleOpen() {
     setOpen((cur) => !cur);
   }
@@ -58,6 +64,18 @@ export function Navbar() {
     window.addEventListener("scroll", handleScroll);
 
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const tiktok = localStorage.getItem("set_tiktok");
+      const facebook = localStorage.getItem("set_facebook");
+      const instagram = localStorage.getItem("set_instagram");
+
+      if (tiktok) setAdminTitktok(JSON.parse(tiktok));
+      if (facebook) setAdminFacebook(JSON.parse(facebook));
+      if (instagram) setAdminInstagram(JSON.parse(instagram));
+    }
   }, []);
 
   return (
@@ -89,26 +107,15 @@ export function Navbar() {
           <NavItem href="#fin">Contáctanos</NavItem>
         </ul>
         <div className="hidden gap-2 lg:flex lg:items-center">
-          <IconButton
-            variant="text"
-            color={isScrolling ? "gray" : "white"}
-            size="sm"
-          >
-            <i className="fa-brands fa-tiktok text-base" />
+          <IconButton variant="text" color={isScrolling ? "gray" : "white"} size="sm">
+            <a href={`${adminTitktok}`} target="_blank"><i className="fa-brands fa-tiktok text-base" /></a>
           </IconButton>
-          <IconButton
-            variant="text"
-            color={isScrolling ? "gray" : "white"}
-            size="sm"
-          >
-            <i className="fa-brands fa-facebook text-base" />
+          <IconButton variant="text" color={isScrolling ? "gray" : "white"} size="sm">
+            <a href={`${adminFacebook}`} target="_blank"><i className="fa-brands fa-facebook text-base" /></a>
           </IconButton>
-          <IconButton
-            variant="text"
-            color={isScrolling ? "gray" : "white"}
-            size="sm"
-          >
-            <i className="fa-brands fa-instagram text-base" />
+          <IconButton variant="text" color={isScrolling ? "gray" : "white"} size="sm">
+            <a href={`${adminInstagram}`} target="_blank">
+              <i className="fa-brands fa-instagram text-base" /></a>
           </IconButton>
           { /*
           <a href="#" target="_blank">
@@ -140,15 +147,21 @@ export function Navbar() {
             <NavItem href="#fin" setOpen={setOpen}>Contáctanos</NavItem>
           </ul>
           <div className="mt-4 flex items-center gap-2">
-            <IconButton variant="text" color="gray" size="sm">
-              <i className="fa-brands fa-tiktok text-base" />
-            </IconButton>
-            <IconButton variant="text" color="gray" size="sm">
-              <i className="fa-brands fa-facebook text-base" />
-            </IconButton>
-            <IconButton variant="text" color="gray" size="sm">
-              <i className="fa-brands fa-instagram text-base" />
-            </IconButton>
+            <a href={`${adminTitktok}`} target="_blank">
+              <IconButton variant="text" color="gray" size="sm">
+                <i className="fa-brands fa-tiktok text-base" />
+              </IconButton>
+            </a>
+            <a href={`${adminFacebook}`} target="_blank">
+              <IconButton variant="text" color="gray" size="sm">
+                <i className="fa-brands fa-facebook text-base" />
+              </IconButton>
+            </a>
+            <a href={`${adminInstagram}`} target="_blank">
+              <IconButton variant="text" color="gray" size="sm">
+                <i className="fa-brands fa-instagram text-base" />
+              </IconButton>
+            </a>
             { /*
             <a href="https://www.material-tailwind.com/blocks" target="_blank">
               <Button color="gray" size="sm" className="ml-auto">

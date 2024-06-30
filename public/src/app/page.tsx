@@ -1,12 +1,10 @@
 'use client';
 
-import React, { useState } from 'react';
-import { SessionProvider } from 'next-auth/react';
-
-// import ComponentEjemplo from "@/components/ComponentEjemplo";
+import React, { useEffect } from 'react';
+import axios from 'axios';
+import { SessionProvider, useSession } from 'next-auth/react';
 import { Navbar, Footer } from "@/components";
 
-// sections
 import Hero from "./hero";
 import VideoIntro from "./video-intro";
 import Feature from "./feature";
@@ -16,8 +14,23 @@ import Testimonials from "./testimonials";
 import Slider from "./slider";
 import FAQS from "./faqs";
 
-
 export default function Home() {
+  useEffect(() => {
+    const fetchSettings = async () => {
+      try {
+        const response = await axios.get(`${process.env.NEXT_PUBLIC_APP_API_URL}/app/v1/manager/fetch-settings/`);
+        const settings = response.data;
+        Object.entries(settings).forEach(([key, value]) => {
+          localStorage.setItem(`set_${key}`, JSON.stringify(value));
+        });
+      } catch (error) {
+        console.error('Error fetching settings:', error);
+      }
+    };
+
+    fetchSettings();
+  },);
+
   return (
     <SessionProvider>
       <>

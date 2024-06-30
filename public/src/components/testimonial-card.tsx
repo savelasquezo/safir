@@ -1,34 +1,28 @@
 import React from "react";
 import { Typography, Card, CardBody, Avatar } from "@material-tailwind/react";
-
-interface TestimonialCardProps {
-  img: string;
-  feedback: string;
-  client: string;
-  title: string;
-}
+import { TestimonialProps } from "@/lib/types/types";
 
 export function TestimonialCard({
-  img,
-  feedback,
-  client,
-  title,
-}: TestimonialCardProps) {
+  file,
+  full_name,
+  job,
+  date,
+  testimonial,
+}: TestimonialProps) {
   return (
     <Card shadow={false} className="items-center text-center">
       <CardBody>
-        <Avatar src={img} className="mb-3" alt={client} size="xxl" />
+        <Avatar src={file} className="mb-3" alt="" size="xxl" />
         <Typography variant="h6" color="blue-gray">
-          {client}
+          {full_name}
         </Typography>
         <Typography variant="small" className="mb-3 font-medium !text-gray-700">
-          {title}
+          {job}
         </Typography>
         <Typography
           variant="paragraph"
-          className="mb-5 font-normal !text-gray-800 text-justify"
-        >
-          &quot;{feedback}&quot;
+          className="mb-5 font-normal !text-gray-800 text-center lowercase text-sm">
+          &quot;{testimonial}&quot;
         </Typography>
       </CardBody>
     </Card>

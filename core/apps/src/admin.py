@@ -64,9 +64,22 @@ class FAQsInline(admin.StackedInline):
     extra = 0
     fieldsets = ((" ", {"fields": (("question","is_active"),"answer")}),)
 
+class TestimonialsSliderInline(admin.StackedInline):
+    
+    model = model.Testimonials
+    extra = 0
+    fieldsets = ((" ", {"fields": (
+            ("full_name","job"),
+            ("file","date"),
+            "testimonial")
+            }
+        ),
+    )
+
+
 class SettingsAdmin(admin.ModelAdmin):
 
-    inlines = [ImagenSliderInline, FAQsInline]
+    inlines = [ImagenSliderInline, TestimonialsSliderInline, FAQsInline]
     
     list_display = (
         "default",
@@ -78,16 +91,23 @@ class SettingsAdmin(admin.ModelAdmin):
     fConfig = {"fields": (
         ("nit","phone"),
         ("email","address"),
+        ("attention","video"),
+        )}
+
+    fPayments = {"fields": (
+        ("nequi",
+        "bancolombia"),
         )}
 
     fSocial = {"fields": (
-        "twitter",
+        "tiktok",
         "facebook",
         "instagram",
         )}
 
     fieldsets = (
         ("", fConfig),
+        ("Medios", fPayments),
         ("Social/Media", fSocial),
         )
 

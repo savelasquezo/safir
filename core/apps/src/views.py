@@ -22,6 +22,32 @@ class serverStatus(APIView):
     def get(self, request):
         return Response({"status": "server available"}, status=status.HTTP_200_OK)
 
+
+
+class fetchSettings(generics.RetrieveAPIView):
+    """
+    Endpoint to retrieve details of a single active Settings.
+    Requires no authentication.
+    """
+    serializer_class =serializer.SettingSerializer
+    permission_classes = [AllowAny]
+    lookup_field = 'pk'  # You can adjust this field to match your model's identifier
+
+    def get_queryset(self):
+        queryset = model.Settings.objects.get()
+        return queryset
+
+    def retrieve(self, request, *args, **kwargs):
+        try:
+            instance = self.get_queryset()
+            serializer = self.get_serializer(instance)
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        except Exception as e:
+            logger.error("%s", e, exc_info=True)
+            return Response({'error': 'Not Found Settings.'}, status=status.HTTP_404_NOT_FOUND)
+
+
+
 class fetchFAQs(generics.ListAPIView):
     """
     Endpoint to retrieve details of the currently active FAQs.
@@ -50,6 +76,34 @@ class fetchFAQs(generics.ListAPIView):
             logger.error("%s", e, exc_info=True)
             return Response({'error': 'Not Found FAQs.'}, status=status.HTTP_404_NOT_FOUND)
 
+
+class fetchTestimonials(generics.ListAPIView):
+    """
+    Endpoint to retrieve details of the currently active Testimonials.
+    Requires no authentication.
+    """
+    serializer_class = serializer.TestimonialsSerializer
+    permission_classes = [AllowAny]
+
+    pagination_class = PageNumberPagination
+    page_size = 3
+
+    def get_queryset(self):
+        queryset = model.Testimonials.objects.all().order_by('-id')[:3]
+        return queryset
+
+    def list(self, request, *args, **kwargs):
+        try:
+            queryset = self.get_queryset()
+            page = self.paginate_queryset(queryset)
+            if page is not None:
+                serializer = self.get_serializer(page, many=True)
+                return self.get_paginated_response(serializer.data)
+            serializer = self.get_serializer(queryset, many=True)
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        except Exception as e:
+            logger.error("%s", e, exc_info=True)
+            return Response({'error': 'Not Found Testimonials.'}, status=status.HTTP_404_NOT_FOUND)
 
 
 class fetchImagesSlider(generics.ListAPIView):

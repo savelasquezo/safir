@@ -11,7 +11,7 @@ const FAQS: React.FC = () => {
   useEffect(() => {
     const fetchFaqs = async () => {
       try {
-        const response = await axios.get(`${process.env.NEXT_PUBLIC_APP_API_URL}/app/v1/mannager/fetch-faqs/`);
+        const response = await axios.get(`${process.env.NEXT_PUBLIC_APP_API_URL}/app/v1/manager/fetch-faqs/`);
         const activeFaqs = response.data.results.filter((faq: any) => faq.is_active);
         setFaqs(activeFaqs);
       } catch (error) {

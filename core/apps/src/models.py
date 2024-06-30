@@ -8,6 +8,9 @@ from django.utils.translation import gettext_lazy as _
 def ImageUploadTo(instance, id):
     return f"uploads/files/{id}"
 
+def VideoUploadTo(instance, id):
+    return f"uploads/media/{id}"
+
 class AccountManager(BaseUserManager):
     def create_user(self, email, password=None, **extra_fields):
         if not email:
@@ -56,10 +59,16 @@ class Settings(models.Model):
     phone = models.CharField(_("Telefono"), max_length=64, blank=True, null=True)
     email = models.EmailField(_("Correo"), max_length=254, blank=True, null=True)
     address = models.CharField(_("Address"), max_length=64, blank=True, null=True)
+    attention = models.CharField(_("Horario"), max_length=64, blank=True, null=True)
 
-    twitter = models.URLField(_("Twitter"), max_length=128, blank=True, null=True)
-    facebook = models.URLField(_("Facebook"), max_length=128, blank=True, null=True)
-    instagram = models.URLField(_("Instagram"), max_length=128, blank=True, null=True)
+    tiktok = models.URLField(_("Tiktok"), max_length=128, blank=True, null=True, default="https://tiktok.com")
+    facebook = models.URLField(_("Facebook"), max_length=128, blank=True, null=True, default="https://facebook.com")
+    instagram = models.URLField(_("Instagram"), max_length=128, blank=True, null=True, default="https://instagram.com")
+
+    video = models.FileField(_("Video"), upload_to=VideoUploadTo, max_length=32, null=True, blank=True)
+    
+    nequi = models.CharField(_("Nequi"), max_length=64, blank=True, null=True)
+    bancolombia = models.CharField(_("Bancolombia"), max_length=64, blank=True, null=True)
 
     def __str__(self):
         return f"{self.default}"
@@ -94,6 +103,24 @@ class FAQs(models.Model):
     class Meta:
         verbose_name = _("FAQ")
         verbose_name_plural = _("FAQs")
+
+class Testimonials(models.Model):
+
+    settings = models.ForeignKey(Settings, on_delete=models.CASCADE)
+    file = models.ImageField(_("Imagen"), upload_to=ImageUploadTo, max_length=32, null=True, blank=True, help_text="Width-(1340px) - Height-(500px)")
+    full_name = models.CharField(_("Nombre/Apellido"), max_length=128, null=False, blank=False)
+    job = models.CharField(_("Actividad"), max_length=128, null=False, blank=False)
+    date = models.DateField(_("Fecha"), default=timezone.now)
+
+    testimonial = models.TextField(_("Testimonial"),max_length=256,blank=True,null=True)
+
+    class Meta:
+        verbose_name = _("Testimonial")
+        verbose_name_plural = _("Testimonials")
+
+    def __str__(self):
+        return "%s" % (self.id)
+
 
 class Messages(models.Model):
 

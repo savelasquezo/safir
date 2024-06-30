@@ -10,28 +10,36 @@ const ITEMS = [
       "Aplica para microempresarios con cualquier actividad económica de servicio, comercio o producción.",
     client: "Independiente",
     title: "",
+    route: "",
     img: "/image/independiente.png",
+    messaje: "Hola Safir! Estoy interesado en adquirir sus productos.",
   },
   {
     feedback:
       "Dirigido a personas que trabajan en empresas o negocios comerciales y que no tienen acceso a un crédito formal.",
     client: "Empleado",
     title: "",
+    route: "",
     img: "/image/empleado.png",
+    messaje: "Hola Safir! Estoy interesado en adquirir sus productos.",
   },
   {
     feedback:
       "Dirigido a personas con reportes menores en centrales de riesgo por sector real o telecomunicaciones.",
     client: "SAFIR",
     title: "",
+    route: "",
     img: "/image/credsafir.png",
+    messaje: "Hola Safir! Estoy interesado en adquirir sus productos.",
   },
   {
     feedback:
       "Para independientes o empleados sin historial de crédito, así podrás iniciar tu vida crediticia.",
     client: "Oportunidad",
     title: "",
+    route: "",
     img: "/image/oportunidad.png",
+    messaje: "Hola Safir! Estoy interesado en adquirir sus productos.",
   },
 ];
 

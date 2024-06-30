@@ -18,6 +18,12 @@ class PWSerializer(PasswordResetConfirmSerializer):
         return url
 
 
+class TestimonialsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = model.Testimonials
+        fields = '__all__'
+
+
 class SettingSerializer(serializers.ModelSerializer):
     class Meta:
         model = model.Settings

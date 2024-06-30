@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
 import { Typography, Card, CardBody, CardHeader } from "@material-tailwind/react";
 import { ItemsCardProps } from "@/lib/types/types";
 
 const SoatItemsCard: React.FC<ItemsCardProps> = ({ img, feedback, client, title, messaje}) => {
-  const adminPhone = JSON.parse(localStorage.getItem("set_phone") || "");
+  const [adminPhone, setAdminPhone] = useState("");
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const phone = localStorage.getItem("set_phone");
+      if (phone) setAdminPhone(JSON.parse(phone));
+    }
+  }, []);
+
   return (
     <a href={`https://wa.me/${adminPhone}?text=${encodeURIComponent(messaje)}`} target="_blank">
       <Card shadow={true} className="items-center text-center">

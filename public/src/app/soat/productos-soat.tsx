@@ -1,7 +1,6 @@
 "use client";
 
-import React from "react";
-import { Typography } from "@material-tailwind/react";
+import React, { useState, useEffect } from 'react';
 import SoatItemsCard from "../../components/soat-card";
 
 const ITEMS = [
@@ -35,7 +34,15 @@ const ITEMS = [
 ];
 
 export function ProductosSoat() {
-  const adminPhone = JSON.parse(localStorage.getItem("set_phone") || "");
+  const [adminPhone, setAdminPhone] = useState("");
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const phone = localStorage.getItem("set_phone");
+      if (phone) setAdminPhone(JSON.parse(phone));
+    }
+  }, []);
+
   return (
     <div className="relative min-h-screen w-full">
       <header className="grid !min-h-[4rem] bg-gray-900 px-8">

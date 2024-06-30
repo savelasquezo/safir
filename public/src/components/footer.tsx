@@ -1,11 +1,15 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
+import { NextResponse } from 'next/server';
+import CircleLoader from 'react-spinners/CircleLoader';
+
 import { Typography, IconButton, Button, Input, Textarea } from "@material-tailwind/react";
 
 const CURRENT_YEAR = new Date().getFullYear();
 
 export function Footer() {
+  const [loading, setLoading] = useState(false);
 
   const [email, setEmail] = React.useState("");
   const [subject, setSubject] = React.useState("");
@@ -30,9 +34,12 @@ export function Footer() {
     }
   }, []);
   
+  const [registrationSuccess, setRegistrationSuccess] = useState(false);
   const handleSubmit = async () => {
+    setLoading(true);
+    await new Promise(resolve => setTimeout(resolve, 1500));
     try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_APP_API_URL}/app/v1/accounts/send-message/`, 
+      const res = await fetch(`${process.env.NEXT_PUBLIC_APP_API_URL}/app/v1/manager/send-message/`, 
       {
         method: 'POST',
         headers: {
@@ -47,12 +54,15 @@ export function Footer() {
   
       const data = res.headers.get('content-type')?.includes('application/json') ? await res.json() : {};
       if (!data.error) {
-        // setRegistrationSuccess(true);
+        setRegistrationSuccess(true);
       }
     } catch (error) {
-      // return NextResponse.json({ error: 'There was an error with the network request' }, { status: 500 });
+      return NextResponse.json({ error: 'There was an error with the network request' }, { status: 500 });
     }
+    setLoading(false);
   }
+
+  const isFormValid = email !== "" && subject !== "" && message !== "";
 
   return (
     <footer className="mt-10 pb-10 bg-gray-900 px-8 pt-12">
@@ -110,9 +120,21 @@ export function Footer() {
                   }}
                 />
               </div>
-              <Button color="white" className="mt-8" fullWidth onClick={handleSubmit}>
-                Enviar
-              </Button>
+              {registrationSuccess ? (
+                    <Button color="green" className="mt-4" fullWidth onClick={handleSubmit}>
+                    Enviado
+                  </Button>
+                ) : (
+                loading ? (
+                  <button type="button" className="mt-4 h-10 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-md py-2 px-4 w-full text-center flex items-center justify-center">
+                    <CircleLoader loading={loading} size={25} color="#1c1d1f" />
+                  </button>
+                ) : (
+                  <Button color="white" className="mt-4" fullWidth onClick={handleSubmit} disabled={!isFormValid}>
+                    Enviar
+                  </Button>
+                )
+              )}
             </form>
           </div>
           <div className="w-2/3 mt-8 flex flex-col justify-center gap-y-8 md:mt-0 md:w-auto">

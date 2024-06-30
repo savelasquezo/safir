@@ -138,12 +138,13 @@ class fetchImagesSlider(generics.ListAPIView):
 
 class sendMessage(generics.GenericAPIView):
     def post(self, request, *args, **kwargs):
+        print("Envio de Mensajeria")
         try:
             subject = request.data.get('subject')
             requestEmail = request.data.get('email', None),
             requestMessaje = request.data.get('message', None)
 
-            email_template_name = 'email/message.html'
+            email_template_name = 'message.html'
 
             c = {
                 "send": requestEmail,
@@ -153,10 +154,11 @@ class sendMessage(generics.GenericAPIView):
             email = render_to_string(email_template_name, c)
             send_mail(subject, message=None, from_email='noreply@asesoriasafir.com',
                         recipient_list=['admin@asesoriasafir.com'], fail_silently=False, html_message=email)
+            print("detail: Email Enviado.")
             return Response({'detail': 'Email Enviado.'}, status=status.HTTP_200_OK)
             
         except Exception as e:
-            eDate = timezone.now().strftime("%Y-%m-%d %H:%M")
-            with open(os.path.join(settings.BASE_DIR, 'logs/core.log'), 'a') as f:
-                f.write("GET EmailError {} --> Error: {}\n".format(eDate, str(e)))
-            return Response({'error': 'Unexpected error occurred'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+            print("error': 'Not Found FAQs")
+            logger.error("%s", e, exc_info=True)
+            return Response({'error': 'SendEmail Failed.'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+

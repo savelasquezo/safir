@@ -11,7 +11,7 @@ const ITEMS = [
     title: "",
     route: "",
     img: "/image/soat1.webp",
-    messaje: "Hola Safir! Estoy interesado en adquirir sus productos.",
+    messaje: "Gracias por comunicarse con Safir, por favor infórmanos placa y tipo de vehículo.",
   },
   {
     feedback:
@@ -20,7 +20,7 @@ const ITEMS = [
     title: "",
     route: "",
     img: "/image/soat2.webp",
-    messaje: "Hola Safir! Estoy interesado en adquirir sus productos.",
+    messaje: "Gracias por comunicarse con Safir, por favor infórmanos placa y tipo de vehículo.",
   },
   {
     feedback:
@@ -29,7 +29,7 @@ const ITEMS = [
     title: "",
     route: "",
     img: "/image/soat3.webp",
-    messaje: "Hola Safir! Estoy interesado en adquirir sus productos.",
+    messaje: "Gracias por comunicarse con Safir, por favor infórmanos placa y tipo de vehículo.",
   },
 ];
 

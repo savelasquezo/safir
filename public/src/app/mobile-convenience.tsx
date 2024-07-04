@@ -35,21 +35,21 @@ export function MobileConvenience() {
 
   useInterval(() => {
     if (conteoTerminado && numSoat < 125) {
-      setNumSoat(numSoat + 1);
+      setNumSoat(numSoat + 5);
     }
-  }, 5);
+  }, 10);
 
   useInterval(() => {
     if (conteoTerminado && numCreditos < 2850) {
-      setNumCreditos(numCreditos + 1);
+      setNumCreditos(numCreditos + 25);
     }
-  }, 0.01);
+  }, 10);
 
   useInterval(() => {
     if (conteoTerminado && numClients < 1320) {
-      setnumClients(numClients + 1);
+      setnumClients(numClients + 15);
     }
-  }, 0.01);
+  }, 10);
 
   useInterval(() => {
     if (conteoTerminado && numQualification < 5) {

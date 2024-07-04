@@ -12,7 +12,7 @@ const ITEMS = [
     title: "",
     route: "",
     img: "/image/independiente.png",
-    messaje: "Hola Safir! Estoy interesado en adquirir sus productos.",
+    messaje: "Gracias por comunicarse con Safir, Por favor infórmanos cuál es tu ocupación y cuánto dinero necesitas.",
   },
   {
     feedback:
@@ -21,7 +21,7 @@ const ITEMS = [
     title: "",
     route: "",
     img: "/image/empleado.png",
-    messaje: "Hola Safir! Estoy interesado en adquirir sus productos.",
+    messaje: "Gracias por comunicarse con Safir, Por favor infórmanos cuál es tu ocupación y cuánto dinero necesitas.",
   },
   {
     feedback:
@@ -30,7 +30,7 @@ const ITEMS = [
     title: "",
     route: "",
     img: "/image/credsafir.png",
-    messaje: "Hola Safir! Estoy interesado en adquirir sus productos.",
+    messaje: "Gracias por comunicarse con Safir, Por favor infórmanos cuál es tu ocupación y cuánto dinero necesitas.",
   },
   {
     feedback:
@@ -39,7 +39,7 @@ const ITEMS = [
     title: "",
     route: "",
     img: "/image/oportunidad.png",
-    messaje: "Hola Safir! Estoy interesado en adquirir sus productos.",
+    messaje: "Gracias por comunicarse con Safir, Por favor infórmanos cuál es tu ocupación y cuánto dinero necesitas.",
   },
 ];
 

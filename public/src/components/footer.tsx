@@ -23,12 +23,12 @@ export function Footer() {
   useEffect(() => {
     if (typeof window !== 'undefined') {
       const address = localStorage.getItem("set_address");
-      const facebook = localStorage.getItem("set_facebook");
+      const nequi = localStorage.getItem("set_nequi");
       const bancolombia = localStorage.getItem("set_bancolombia");
       const attention = localStorage.getItem("set_attention");
 
       if (address) setAdminAddress(JSON.parse(address));
-      if (facebook) setAdminNequi(JSON.parse(facebook));
+      if (nequi) setAdminNequi(JSON.parse(nequi));
       if (bancolombia) setAdminBancolombia(JSON.parse(bancolombia));
       if (attention) setAdminAttention(JSON.parse(attention));
     }

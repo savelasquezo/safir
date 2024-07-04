@@ -31,8 +31,8 @@ export function FixedPlugin() {
 		<WhatsAppWidget
 			phoneNo="573126067813"
 			position="right"
-			widgetWidth="300px"
-			widgetWidthMobile="260px"
+			widgetWidth="250px"
+			widgetWidthMobile="220px"
 			autoOpen={true}
 			autoOpenTimer={15000}
 			messageBox={true}

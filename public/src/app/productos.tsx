@@ -8,7 +8,7 @@ import ProductsCard from "../components/product-card";
 
 export function Products() {
   const [adminPhone, setAdminPhone] = useState("");
-  const messaje = "Hola Safir! Necesito mas informacion sobre el Credimillon!";
+  const messaje = "Gracias por comunicarse con Safir, Por favor infórmanos en que municipio vives y con quien has tenido historial de créditos.";
 
   const DATA = [
     {

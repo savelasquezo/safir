@@ -89,11 +89,11 @@ export function Navbar() {
       <div className="container mx-auto flex items-center justify-between">
         <div>
           <Image
-            width={86}
-            height={41}
+            width={182}
+            height={82}
             src="/logos/logo_safir.webp"
             alt="$AFIR"
-            className="scale-150"
+            className=""
           />
         </div>
         <ul
@@ -140,7 +140,7 @@ export function Navbar() {
       </div>
       <Collapse open={open}>
         <div className="container mx-auto mt-4 rounded-lg border-t border-blue-gray-50 bg-white px-6 py-5">
-          <ul className="flex flex-col gap-4 text-blue-gray-900">
+          <ul className="flex flex-col gap-4 text-gray-900">
             <NavItem href="/#" setOpen={setOpen}>Inicio</NavItem>
             <NavItem href="/#servicios" setOpen={setOpen}>Servicios</NavItem>
             <NavItem href="/#quienes-somos" setOpen={setOpen}>¿Quiénes somos?</NavItem>

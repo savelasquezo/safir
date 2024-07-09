@@ -138,7 +138,6 @@ class fetchImagesSlider(generics.ListAPIView):
 
 class sendMessage(generics.GenericAPIView):
     def post(self, request, *args, **kwargs):
-        print("Envio de Mensajeria")
         try:
             subject = request.data.get('subject')
             requestEmail = request.data.get('email', None),

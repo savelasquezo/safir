@@ -67,9 +67,9 @@ export function Footer() {
   return (
     <footer className="mt-10 pb-10 bg-gray-900 px-8 pt-12">
       <div className="container mx-auto" id="fin">
-        <div className="flex flex-wrap justify-center gap-8">
-          <div className="w-1/3 text-center md:text-left">
-            <form className="max-w-screen-lg sm:w-96">
+        <div className="grid justify-between sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
+          <div className="w-10/12 text-center md:text-left">
+            <form className="w-full h-full">
               <div className="mb-1 flex flex-col gap-6">
                 <Typography variant="h6" color="white" className="-mb-3">Correo</Typography>
                 <Input size="lg" type="email" id="email" value={email} className=" !border-blue-gray-300 focus:!border-gray-100" color="white"
@@ -137,39 +137,39 @@ export function Footer() {
               )}
             </form>
           </div>
-          <div className="w-2/3 mt-8 flex flex-col justify-center gap-y-8 md:mt-0 md:w-auto">
+          <div className="w-1/3 mt-8 flex flex-col justify-center gap-y-8 md:mt-0 md:w-auto">
             <div className="flex flex-col">
-              <Typography color="white" className="mb-4 uppercase text-lg font-semibold">Horarios de Atencion:</Typography>
+              <Typography color="white" className="mb-4 uppercase text-sm lg:text-lg font-semibold">Horarios de Atencion:</Typography>
               <span className="flex flex-row items-center justify-start">
-                <Typography color="white" className="mb-2 mx-4 uppercase font-semibold">Chinchina:</Typography>
-                <Typography color="white" className="mb-2 font-normal text-sm">
+                <Typography color="white" className="mb-2 mx-4 uppercase font-semibold text-sm lg:text-base">Chinchina:</Typography>
+                <Typography color="white" className="mb-2 font-normal text-xs lg:text-sm ">
                   {adminAddress} -- {adminAttention}
                 </Typography>
               </span>
               <span className="flex flex-row items-center justify-start">
                 <Typography color="white" className="mb-2 mx-4 uppercase font-semibold">Virtual:</Typography>
-                <Typography color="white" className="mb-2 font-normal text-sm">
+                <Typography color="white" className="mb-2 font-normal text-xs lg:text-sm ">
                   Whatsapp -- {adminAttention}
                 </Typography>
               </span>
             </div>
             <div className="flex flex-col">
-              <Typography color="white" className="mb-4 uppercase text-lg font-semibold">Medios Autorizados</Typography>
+              <Typography color="white" className="mb-4 uppercase text-sm lg:text-lg font-semibold">Medios Autorizados</Typography>
               <span className="flex flex-row items-center justify-start">
-                <Typography color="white" className="mb-2 mx-4 uppercase font-semibold">Nequi </Typography>
-                <Typography color="white" className="mb-2 font-normal text-sm">
+                <Typography color="white" className="mb-2 mx-4 uppercase font-semibold text-sm lg:text-base">Nequi</Typography>
+                <Typography color="white" className="mb-2 font-normal text-xs lg:text-sm ">
                   {adminNequi}
                 </Typography>
               </span>
               <span className="flex flex-row items-center justify-start">
-                <Typography color="white" className="mb-2 mx-4 uppercase font-semibold">Bancolombia:</Typography>
-                <Typography color="white" className="mb-2 font-normal text-sm">
+                <Typography color="white" className="mb-2 mx-4 uppercase font-semibold text-sm lg:text-base">Bancolombia:</Typography>
+                <Typography color="white" className="mb-2 font-normal text-xs lg:text-sm ">
                   {adminBancolombia}
                 </Typography>
               </span>
               <span className="flex flex-row items-center justify-start">
-                <Typography color="white" className="mb-2 mx-4 uppercase font-semibold">Oficina:</Typography>
-                <Typography color="white" className="mb-2 font-normal text-sm">
+              <Typography color="white" className="mb-2 mx-4 uppercase font-semibold text-sm lg:text-base">Oficina:</Typography>
+                <Typography color="white" className="mb-2 font-normal text-xs lg:text-sm ">
                   {adminAddress}
                 </Typography>
               </span>

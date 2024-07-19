@@ -10,7 +10,7 @@ import FeatureCard from "../components/feature-card";
 
 export function Features() {
   return (
-    <section className="py-10 px-4">
+    <section className="py-10 px-4" id="quienes-somos">
       <div className="w-3/4 grid grid-cols-2 gap-4 m-auto">
         <div
             className="col-span-4 sm:col-span-2 lg:col-span-1 relative px-5 pt-10 pb-2 flex flex-col justify-start items-center border-2 border-gray-600 rounded-xl text-gray-600">
@@ -44,9 +44,9 @@ export function Features() {
         </div>
       </div>
       <div className="w-2/3 mx-auto my-8 text-center text-gray-600">
-          <p className="font-animeace">Transformar vidas y comunidades, empoderando a individuos y pequeños negocios para que alcancen su bienestar y desarrollo económico sostenible.</p>
+          <p className="font-semibold text-2xl uppercase">Transformar vidas y comunidades, empoderando a individuos y pequeños negocios para que alcancen su bienestar y desarrollo económico sostenible.</p>
         </div>
-      <div className="container mx-auto mt-20 mb-10 text-center" id="quienes-somos">
+      <div className="container mx-auto mt-20 mb-10 text-center">
         <div className="flex w-full flex-col items-center">
           <Typography variant="h2" color="blue-gray" className="mb-8">
             <strong>SAFIR CON MODALIDAD FINTECH</strong>

@@ -77,3 +77,18 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
+.mask-image-80{
+  mask-image: linear-gradient(
+    black 80%,
+    transparent
+  );
+}
+
+.mask-image-95{
+  mask-image: linear-gradient(
+    black 95%,
+    transparent
+  );
+}
+
+

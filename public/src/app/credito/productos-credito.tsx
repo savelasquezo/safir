@@ -52,7 +52,7 @@ export function Products() {
         </div>
       </header>
       <section className="px-10 !py-10">
-        <div className="container mx-auto" id="servicios">
+        <div className="container mx-auto">
           <div className="mb-10 flex w-full flex-col items-center">
             <Typography variant="h2" color="blue-gray" className="mb-2">
               Nuestros Productos

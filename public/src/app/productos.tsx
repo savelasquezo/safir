@@ -48,8 +48,8 @@ export function Products() {
   }, []);
 
   return (
-    <section className="px-10 !py-10">
-      <div className="container mx-auto" id="servicios">
+    <section className="px-10 !py-10" id="servicios">
+      <div className="container mx-auto">
         <div className="grid grid-cols-1 gap-x-8 gap-y-12 md:grid-cols-3 lg:px-20">
           {DATA.map((props, key) => (
             <ProductsCard key={key} {...props} />

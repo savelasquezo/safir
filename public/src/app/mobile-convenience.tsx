@@ -62,10 +62,10 @@ export function MobileConvenience() {
     <section className="py-10 px-8" onMouseEnter={() => {setConteoTerminado(true)}}>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto items-center">
         <Image
-          width={256}
-          height={256}
-          src="/image/investment-fund.png"
-          className="col-span-1 w-1/2 mx-auto lg:w-10/12"
+          width={2816}
+          height={4000}
+          src="/image/financial-elements-data.webp"
+          className="col-span-1 w-1/2 mx-auto lg:w-10/12 mask-image-80"
           alt="iphone-photo"
         />
         <div className="col-span-1 mx-auto max-w-lg px-4 lg:px-0">

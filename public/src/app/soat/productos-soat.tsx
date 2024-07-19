@@ -51,7 +51,7 @@ export function ProductosSoat() {
         </div>
       </header>
       <section className="px-10 !py-10 mt-12">
-        <div className="container mx-auto" id="servicios">
+        <div className="container mx-auto">
           <div className="grid grid-cols-1 gap-x-8 gap-y-12 md:grid-cols-3 lg:px-20 uppercase">
             {ITEMS.map((props, key) => (
               <SoatItemsCard key={key} {...props} />

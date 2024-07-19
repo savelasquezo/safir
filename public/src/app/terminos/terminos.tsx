@@ -17,7 +17,7 @@ export function Terminos() {
         </div>
       </header>
       <section className="py-10 px-4">
-        <div className="container mx-auto mb-10 text-center" id="quienes-somos">
+        <div className="container mx-auto mb-10 text-center">
           <div className="flex w-full flex-col items-center">
             <div className="mb-10 flex h-12 w-12 items-center justify-center rounded-lg bg-gray-900 text-white ">
               <DocumentMagnifyingGlassIcon className="h-6 w-6" />

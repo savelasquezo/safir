@@ -6,7 +6,7 @@ import { Button, Typography } from "@material-tailwind/react";
 function Hero() {
   return (
     <div className="relative min-h-screen w-full">
-      <header className="grid !min-h-[49rem] bg-safir2 px-8">
+      <header className="grid !min-h-[49rem] bg-safir4 px-8">
         <div className="container mx-auto mt-32 grid h-full w-full grid-cols-1 place-items-center lg:mt-14 lg:grid-cols-2">
           <div className="col-span-1">
             <Typography variant="h1" color="white" className="mb-4">
@@ -19,9 +19,9 @@ function Hero() {
           <Image
             width={470}
             height={576}
-            src="/image/build-arrow.png"
+            src="/image/build-arrow-collage.webp"
             alt="team work"
-            className="col-span-1 my-20 h-full max-h-[30rem] -translate-y-32 md:max-h-[36rem] lg:my-0 lg:ml-auto lg:max-h-[40rem] lg:translate-y-0"
+            className="col-span-1 my-20 h-full max-h-[32rem] -translate-y-32 md:max-h-[38rem] lg:my-0 lg:ml-auto lg:max-h-[42rem] lg:translate-y-0 mask-image-95"
           />
         </div>
       </header>

@@ -37,7 +37,7 @@ const Slider: React.FC = () => {
                 rightControl={<svg className="w-5 h-5 text-gray-400 sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path></svg>}
                 leftControl={<svg className="w-5 h-5 text-gray-400 sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7"></path></svg>}>
                 {imagenSliders?.map((imagenSlider, i) => (
-                  <Image key={i} width={3000} height={2000} src={imagenSlider?.file} loader={imageLoader} priority={true} objectFit="fill" layout="responsive" className="block w-full h-full" alt=""/>
+                  <Image key={i} width={3000} height={2000} src={imagenSlider?.file} loader={imageLoader} priority={true} className="w-auto h-full bg-contain" alt=""/>
                 ))}
               </Carousel>
               ) : null}

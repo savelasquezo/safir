@@ -10,11 +10,11 @@ import FeatureCard from "../components/feature-card";
 
 export function Features() {
   return (
-    <section className="py-10 px-4" id="quienes-somos">
-      <div className="w-3/4 grid grid-cols-2 gap-4 m-auto">
+    <section className="py-10" id="quienes-somos">
+      <div className="w-3/4 grid grid-cols-2 gap-4 m-auto px-4">
         <div
-            className="col-span-4 sm:col-span-2 lg:col-span-1 relative px-5 pt-10 pb-2 flex flex-col justify-start items-center border-2 border-gray-600 rounded-xl text-gray-600">
-            <span className="absolute -top-6 p-3 border-2 border-gray-600 rounded-full bg-white">
+            className="col-span-4 sm:col-span-2 lg:col-span-1 relative px-5 pt-10 pb-2 flex flex-col justify-start items-center border-2 border-safir1 rounded-xl text-gray-600 shadow-lg">
+            <span className="absolute -top-6 p-3 border-2 border-safir1 rounded-full bg-safir1 text-white">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                 aria-hidden="true" className="w-7 h-7 text-yellow-640">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
@@ -28,8 +28,8 @@ export function Features() {
               inmediatas para que las personas puedan cumplir alcanzar sus objetivos en el corto plazo..</p>
         </div>
         <div
-            className="col-span-4 sm:col-span-2 lg:col-span-1 relative px-5 pt-10 pb-2 flex flex-col justify-start items-center border-2 border-gray-600 rounded-xl text-gray-600">
-            <span className="absolute -top-6 p-3 border-2 border-gray-600 rounded-full bg-white">
+            className="col-span-4 sm:col-span-2 lg:col-span-1 relative px-5 pt-10 pb-2 flex flex-col justify-start items-center border-2 border-safir1 rounded-xl text-gray-600 shadow-lg">
+            <span className="absolute -top-6 p-3 border-2 border-safir1 rounded-full bg-safir1 text-white">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                 aria-hidden="true" className="w-7 h-7 text-yellow-640">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
@@ -43,14 +43,14 @@ export function Features() {
                financiera, mejorando así la calidad de vida de todos los que son desatendidos por el sector financiero tradicional..</p>
         </div>
       </div>
-      <div className="w-2/3 mx-auto my-8 text-center text-gray-600">
-          <p className="font-semibold text-2xl uppercase">Transformar vidas y comunidades, empoderando a individuos y pequeños negocios para que alcancen su bienestar y desarrollo económico sostenible.</p>
+      <div className="w-full lg:w-1/2 mx-auto my-8 text-center text-gray-900">
+          <p className="font-semibold text-sm md:text-base lg:text-2xl uppercase text-center px-4">Transformar vidas y comunidades, empoderando a individuos y pequeños negocios para que alcancen su bienestar y desarrollo económico sostenible.</p>
         </div>
-      <div className="container mx-auto mt-20 mb-10 text-center">
+      <div className="mx-auto mt-20 mb-10 text-center w-screen bg-background-image03 bg-cover py-24 px-8 lg:px-24 mask-image-tb-80">
         <div className="flex w-full flex-col items-center">
-          <Typography variant="h2" color="blue-gray" className="mb-8">
-            <strong>SAFIR CON MODALIDAD FINTECH</strong>
-          </Typography>
+          <h1 className="mb-8 font-bold text-2xl md:text-4xl">
+            <strong className="font-bold">SAFIR CON MODALIDAD FINTECH</strong>
+          </h1>
         </div>
         <Typography variant="lead" className=" !text-gray-800 text-center">
           Ofrecemos productos y servicios financieros innovadores diseñados para satisfacer las necesidades de personas no bancarizadas, utilizando tecnología avanzada para agilizar el proceso de créditos y simplificar trámites, lo que resulta en tiempos de respuesta más rápidos y costos de trámite reducidos para nuestros clientes.

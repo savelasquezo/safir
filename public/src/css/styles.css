@@ -53,6 +53,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'StraightPath';
+  src: url('/fonts/StraightPath.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -91,4 +98,12 @@ input[type=number] {
   );
 }
 
-
+.mask-image-tb-80 {
+  mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    black 20%,
+    black 80%,
+    transparent
+  );
+}

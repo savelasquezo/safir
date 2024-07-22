@@ -80,7 +80,7 @@ class Settings(models.Model):
 class ImagenSlider(models.Model):
 
     settings = models.ForeignKey(Settings, on_delete=models.CASCADE)
-    file = models.ImageField(_("Imagen"), upload_to=ImageUploadTo, max_length=32, null=True, blank=True, help_text="Width-(1340px) - Height-(500px)")
+    file = models.ImageField(_("Imagen"), upload_to=ImageUploadTo, max_length=32, null=True, blank=True, help_text="Width-(1895px) - Height-(810px)")
     is_active = models.BooleanField(default=True, verbose_name='')
     
     def __str__(self):

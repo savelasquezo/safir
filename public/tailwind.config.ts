@@ -15,9 +15,15 @@ const config: Config = withMT({
         roboto: ['Roboto', 'sans-serif'],
         montserrat: ['Montserrat', 'sans-serif'],
         courier: ['Courier', 'sans-serif'],
-        poppins: ['Poppins', 'sans-serif']
+        poppins: ['Poppins', 'sans-serif'],
+        straight: ['StraightPath', 'sans-serif']
       },
       backgroundImage: {
+        'background-image01': "url('/assets/background01.webp')",
+        'background-image02': "url('/assets/background02.webp')",
+        'background-image03': "url('/assets/background03.webp')",
+        'background-image04': "url('/assets/background04.webp')",
+        'background-image05': "url('/assets/background05.webp')",
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },

@@ -60,6 +60,20 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Cocogoose';
+  src: url('/fonts/Cocogoose.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Historic';
+  src: url('/fonts/Historic.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

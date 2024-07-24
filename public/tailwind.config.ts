@@ -16,7 +16,9 @@ const config: Config = withMT({
         montserrat: ['Montserrat', 'sans-serif'],
         courier: ['Courier', 'sans-serif'],
         poppins: ['Poppins', 'sans-serif'],
-        straight: ['StraightPath', 'sans-serif']
+        straight: ['StraightPath', 'sans-serif'],
+        cocogoose: ['Cocogoose', 'sans-serif'],
+        historic: ['Historic', 'sans-serif'],
       },
       backgroundImage: {
         'background-image01': "url('/assets/background01.webp')",

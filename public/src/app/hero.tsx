@@ -12,8 +12,8 @@ function Hero() {
             <Typography variant="h1" color="white" className="mb-4 uppercase hidden md:block">
               Safir
             </Typography>
-            <Typography variant="lead" className="mb-7 !text-white text-center md:text-start md:pr-16 xl:pr-28">
-              Servicio de Asesorías y Fortalecimiento a empleados e independientes de la región.
+            <Typography variant="lead" className="mb-7 !text-white text-center md:text-start md:pr-16 xl:pr-28 font-cocogoose">
+              Servicio de asesorías y fortalecimiento a empleados e independientes de la región.
             </Typography>
           </div>
           <Image

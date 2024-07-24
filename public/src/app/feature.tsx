@@ -44,7 +44,7 @@ export function Features() {
         </div>
       </div>
       <div className="w-full lg:w-1/2 mx-auto my-8 text-center text-gray-900">
-          <p className="font-semibold text-sm md:text-base lg:text-2xl uppercase text-center px-4">Transformar vidas y comunidades, empoderando a individuos y pequeños negocios para que alcancen su bienestar y desarrollo económico sostenible.</p>
+          <p className="font-semibold text-sm md:text-base lg:text-2xl uppercase text-center px-4 font-cocogoose">Transformar vidas y comunidades, empoderando a individuos y pequeños negocios para que alcancen su bienestar y desarrollo económico sostenible.</p>
         </div>
       <div className="mx-auto mt-20 mb-10 text-center w-screen bg-background-image03 bg-cover py-24 px-8 lg:px-24 mask-image-tb-80">
         <div className="flex w-full flex-col items-center">

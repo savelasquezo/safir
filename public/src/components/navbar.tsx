@@ -23,8 +23,8 @@ function NavItem({ children, href, setOpen }: NavItemProps) {
         as="a"
         href={href || "#"}
         target={"_self"}
-        variant="small"
-        className="font-medium"
+        variant="h5"
+        className="font-medium "
         onClick={setOpen ? () => setOpen(false) : () => false}
       >
         {children}

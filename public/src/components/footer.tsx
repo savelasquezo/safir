@@ -139,11 +139,11 @@ export function Footer() {
           </div>
           <div className="w-1/3 mt-8 flex flex-col justify-center gap-y-8 md:mt-0 md:w-auto">
             <div className="flex flex-col">
-              <Typography color="white" className="mb-4 uppercase text-sm lg:text-lg font-semibold">Horarios de Atencion:</Typography>
+              <Typography color="white" className="mb-4 uppercase text-sm lg:text-lg font-semibold font-cocogoose">Horarios de Atención:</Typography>
               <span className="flex flex-row items-center justify-start">
-                <Typography color="white" className="mb-2 mx-4 uppercase font-semibold text-sm lg:text-base">Chinchina:</Typography>
+                <Typography color="white" className="mb-2 mx-4 uppercase font-semibold text-sm lg:text-base font-cocogoose">Chinchina:</Typography>
                 <Typography color="white" className="mb-2 font-normal text-xs lg:text-sm ">
-                  {adminAddress} -- {adminAttention}
+                  {adminAttention}
                 </Typography>
               </span>
               <span className="flex flex-row items-center justify-start">
@@ -154,21 +154,21 @@ export function Footer() {
               </span>
             </div>
             <div className="flex flex-col">
-              <Typography color="white" className="mb-4 uppercase text-sm lg:text-lg font-semibold">Medios Autorizados</Typography>
+              <Typography color="white" className="mb-4 uppercase text-sm lg:text-lg font-semibold font-cocogoose">Medios de Pago</Typography>
               <span className="flex flex-row items-center justify-start">
-                <Typography color="white" className="mb-2 mx-4 uppercase font-semibold text-sm lg:text-base">Nequi</Typography>
+                <Typography color="white" className="mb-2 mx-4 uppercase font-semibold text-sm lg:text-base font-cocogoose">Nequi</Typography>
                 <Typography color="white" className="mb-2 font-normal text-xs lg:text-sm ">
                   {adminNequi}
                 </Typography>
               </span>
               <span className="flex flex-row items-center justify-start">
-                <Typography color="white" className="mb-2 mx-4 uppercase font-semibold text-sm lg:text-base">Bancolombia:</Typography>
+                <Typography color="white" className="mb-2 mx-4 uppercase font-semibold text-sm lg:text-base font-cocogoose">Bancolombia:</Typography>
                 <Typography color="white" className="mb-2 font-normal text-xs lg:text-sm ">
                   {adminBancolombia}
                 </Typography>
               </span>
               <span className="flex flex-row items-center justify-start">
-              <Typography color="white" className="mb-2 mx-4 uppercase font-semibold text-sm lg:text-base">Oficina:</Typography>
+              <Typography color="white" className="mb-2 mx-4 uppercase font-semibold text-sm lg:text-base font-cocogoose">Oficina:</Typography>
                 <Typography color="white" className="mb-2 font-normal text-xs lg:text-sm ">
                   {adminAddress}
                 </Typography>

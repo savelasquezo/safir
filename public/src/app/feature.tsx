@@ -10,7 +10,7 @@ import FeatureCard from "../components/feature-card";
 
 export function Features() {
   return (
-    <section className="py-10" id="quienes-somos">
+    <section className="py-6" id="quienes-somos">
       <div className="w-3/4 grid grid-cols-2 gap-4 m-auto px-4">
         <div
             className="col-span-4 sm:col-span-2 lg:col-span-1 relative px-5 pt-10 pb-2 flex flex-col justify-start items-center border-2 border-safir1 rounded-xl text-gray-600 shadow-lg">
@@ -22,10 +22,10 @@ export function Features() {
                 </path>
             </svg>
         </span>
-            <h1 className="my-1 gradient-red text-base uppercase tracking-wide">Mision</h1>
+            <h1 className="my-1 gradient-red text-base uppercase tracking-wide font-cocogoose">Mision</h1>
             <p className="py-2 text-center">Nuestra misión es fomentar la inclusión financiera y el desarrollo socioeconómico, ofreciendo préstamos, 
               financiamiento y asesorías a independientes y empleados, por medio de herramientas tecnológicas y soluciones financieras accesibles e 
-              inmediatas para que las personas puedan cumplir alcanzar sus objetivos en el corto plazo..</p>
+              inmediatas para que las personas puedan cumplir alcanzar sus objetivos en el corto plazo.</p>
         </div>
         <div
             className="col-span-4 sm:col-span-2 lg:col-span-1 relative px-5 pt-10 pb-2 flex flex-col justify-start items-center border-2 border-safir1 rounded-xl text-gray-600 shadow-lg">
@@ -37,10 +37,10 @@ export function Features() {
                 </path>
             </svg>
         </span>
-            <h1 className="my-1 gradient-red text-base uppercase tracking-wide">Vision</h1>
+            <h1 className="my-1 gradient-red text-base uppercase tracking-wide font-cocogoose">Vision</h1>
             <p className="py-2 text-center">Consolidarnos en la región como un modelo de préstamos, financiamiento y educación financiera que vaya a
                la vanguardia de las nuevas tecnologías y herramientas (Fintech) siendo un referente en el impulso de la inclusión y la educación 
-               financiera, mejorando así la calidad de vida de todos los que son desatendidos por el sector financiero tradicional..</p>
+               financiera, mejorando así la calidad de vida de todos los que son desatendidos por el sector financiero tradicional.</p>
         </div>
       </div>
       <div className="w-full lg:w-1/2 mx-auto my-8 text-center text-gray-900">
@@ -48,7 +48,7 @@ export function Features() {
         </div>
       <div className="mx-auto mt-20 mb-10 text-center w-screen bg-background-image03 bg-cover py-24 px-8 lg:px-24 mask-image-tb-80">
         <div className="flex w-full flex-col items-center">
-          <h1 className="mb-8 font-bold text-2xl md:text-4xl">
+          <h1 className="mb-8 font-bold text-2xl md:text-4xl font-cocogoose">
             <strong className="font-bold">SAFIR CON MODALIDAD FINTECH</strong>
           </h1>
         </div>

@@ -121,3 +121,7 @@ input[type=number] {
     transparent
   );
 }
+
+.whatsapp_widget_icon {
+  border: none !important;
+}

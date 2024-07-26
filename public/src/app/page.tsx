@@ -33,7 +33,7 @@ export default function Home() {
 
   return (
     <SessionProvider>
-      <>
+      <main className='h-full w-full bg-gray-50'>
         <Navbar />
         <Hero />
         <Products />
@@ -44,7 +44,7 @@ export default function Home() {
         <Slider />
         <FAQS />
         <Footer />
-      </>
+      </main>
     </SessionProvider>
   );
 }

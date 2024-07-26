@@ -28,7 +28,7 @@ export function Testimonials() {
     <section className="px-10 py-10">
       <div className="container mx-auto">
         <div className="mb-10 flex w-full flex-col items-center">
-          <Typography variant="h2" color="blue-gray" className="mb-1 uppercase">
+          <Typography variant="h2" color="blue-gray" className="mb-1 uppercase font-cocogoose">
             Testimonios
           </Typography>
         </div>

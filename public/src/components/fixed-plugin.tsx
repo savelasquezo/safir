@@ -54,6 +54,7 @@ export function FixedPlugin() {
 			btnBgColor="green"
 			btnTxt="Enviar mensaje"
 			btnTxtColor="white"
+			style={{ border: 'none' }}
 		/>
 	);
 };

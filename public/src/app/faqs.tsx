@@ -49,9 +49,9 @@ const FAQS: React.FC = () => {
         </div>
         <p className="text-center text-gray-600 text-base mt-9">
           ¿Todavía tienes preguntas?{' '}
-          <span className="cursor-pointer font-medium text-tertiary transition-all duration-200 hover:text-tertiary focus:text-tertiary hover:underline">
-            Contacta con nuestro soporte
-          </span>
+          <a href="https://wa.me/+573126067813" className="cursor-pointer font-medium text-tertiary transition-all duration-200 hover:text-tertiary focus:text-tertiary hover:underline">
+            Contacta con uno de nuestros asesores
+          </a>
         </p>
       </div>
     </section>

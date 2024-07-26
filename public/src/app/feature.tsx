@@ -22,7 +22,7 @@ export function Features() {
                 </path>
             </svg>
         </span>
-            <h1 className="my-1 gradient-red text-base uppercase tracking-wide font-cocogoose">Mision</h1>
+            <h1 className="my-1 gradient-red text-base uppercase tracking-wide font-cocogoose">Misión</h1>
             <p className="py-2 text-center">Nuestra misión es fomentar la inclusión financiera y el desarrollo socioeconómico, ofreciendo préstamos, 
               financiamiento y asesorías a independientes y empleados, por medio de herramientas tecnológicas y soluciones financieras accesibles e 
               inmediatas para que las personas puedan cumplir alcanzar sus objetivos en el corto plazo.</p>
@@ -37,15 +37,16 @@ export function Features() {
                 </path>
             </svg>
         </span>
-            <h1 className="my-1 gradient-red text-base uppercase tracking-wide font-cocogoose">Vision</h1>
-            <p className="py-2 text-center">Consolidarnos en la región como un modelo de préstamos, financiamiento y educación financiera que vaya a
-               la vanguardia de las nuevas tecnologías y herramientas (Fintech) siendo un referente en el impulso de la inclusión y la educación 
-               financiera, mejorando así la calidad de vida de todos los que son desatendidos por el sector financiero tradicional.</p>
+            <h1 className="my-1 gradient-red text-base uppercase tracking-wide font-cocogoose">Visión</h1>
+            <p className="py-2 text-center">Consolidarnos en la región como un modelo de préstamos, financiamiento y educación financiera 
+              que vaya a la vanguardia de las nuevas tecnologías y herramientas (Fintech), siendo un referente en el impulso de la inclusión 
+              y la educación financiera, mejorando así la calidad de vida de todas las personas desatendidas por el sector financiero tradicional.
+            </p>
         </div>
       </div>
-      <div className="w-full lg:w-1/2 mx-auto my-8 text-center text-gray-900">
-          <p className="font-semibold text-sm md:text-base lg:text-2xl uppercase text-center px-4 font-cocogoose">Transformar vidas y comunidades, empoderando a individuos y pequeños negocios para que alcancen su bienestar y desarrollo económico sostenible.</p>
-        </div>
+      <div className="w-full lg:w-1/2 mx-auto my-8 text-center text-gray-900 hidden">
+        <p className="font-semibold text-sm md:text-base lg:text-2xl uppercase text-center px-4 font-cocogoose">Transformar vidas y comunidades, empoderando a individuos y pequeños negocios para que alcancen su bienestar y desarrollo económico sostenible.</p>
+      </div>
       <div className="mx-auto mt-20 mb-10 text-center w-screen bg-background-image03 bg-cover py-24 px-8 lg:px-24 mask-image-tb-80">
         <div className="flex w-full flex-col items-center">
           <h1 className="mb-8 font-bold text-2xl md:text-4xl font-cocogoose">
@@ -53,7 +54,9 @@ export function Features() {
           </h1>
         </div>
         <Typography variant="lead" className=" !text-gray-800 text-center">
-          Ofrecemos productos y servicios financieros innovadores diseñados para satisfacer las necesidades de personas no bancarizadas, utilizando tecnología avanzada para agilizar el proceso de créditos y simplificar trámites, lo que resulta en tiempos de respuesta más rápidos y costos de trámite reducidos para nuestros clientes.
+          Ofrecemos productos y servicios financieros innovadores, diseñados para satisfacer las necesidades de personas no bancarizadas, 
+          utilizando tecnología avanzada para agilizar el proceso de créditos y trámites simples, teniendo como resultado, tiempos de respuesta más rápidos, 
+          además de costos y esfuerzos reducidos para todos nuestros clientes.
         </Typography>
       </div>
     </section>

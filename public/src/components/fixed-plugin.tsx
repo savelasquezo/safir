@@ -48,7 +48,7 @@ export function FixedPlugin() {
 			headerCaption="Online"
 			bodyBgColor="#bbb"
 			chatPersonName="Asesora"
-			chatMessage={<>Hola 👋 <br />¿En qué le podemos colaborar?</>}
+			chatMessage={<>Hola 👋 <br />¿En qué te podemos colaborar?</>}
 			footerBgColor="#999"
 			placeholder="Escribe aquí..."
 			btnBgColor="green"

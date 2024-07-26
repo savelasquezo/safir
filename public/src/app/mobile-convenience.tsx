@@ -85,10 +85,10 @@ export function MobileConvenience() {
             Los mejores en lo que hacemos.
           </Typography>
           <div className="col-span-2 grid gap-5 grid-cols-2">
-            <InfoCard icon={<GrMoney/>} title={`${numCreditos.toString()} +`}>{"Prestamos Desembolsados"}</InfoCard>
-            <InfoCard icon={<FaUserFriends/>} title={`${numClients.toString()} +`}>{"Clientes Atendidos"}</InfoCard>
-            <InfoCard icon={<PiIdentificationBadge/>} title={`${numSoat.toString()} +`}>{"Soat Expedidos"}</InfoCard>
-            <InfoCard icon={<TbStars/>} title={`${numQualification.toString()}/5`}>{"Calificacion de Atencion"}</InfoCard>
+            <InfoCard icon={<GrMoney/>} title={`${numCreditos.toString()} +`}>{"Préstamos desembolsados"}</InfoCard>
+            <InfoCard icon={<FaUserFriends/>} title={`${numClients.toString()} +`}>{"Clientes atendidos"}</InfoCard>
+            <InfoCard icon={<PiIdentificationBadge/>} title={`${numSoat.toString()} +`}>{"SOAT expedidos"}</InfoCard>
+            <InfoCard icon={<TbStars/>} title={`${numQualification.toString()}/5`}>{"Calificación del servicio"}</InfoCard>
           </div>
         </div>
       </div>

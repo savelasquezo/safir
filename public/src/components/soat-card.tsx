@@ -16,7 +16,7 @@ const SoatItemsCard: React.FC<ItemsCardProps> = ({ img, feedback, client, title,
     <a href={`https://wa.me/${adminPhone}?text=${encodeURIComponent(messaje)}`} target="_blank">
       <Card shadow={true} className="items-center text-center">
         <CardHeader floated={false}>
-          <img src={img} alt="picture" />
+          <img src={img? img: "/image/placeholder.png"} alt="picture" />
         </CardHeader>
         <CardBody>
           <Typography variant="h4" color="blue-gray">{client}</Typography>

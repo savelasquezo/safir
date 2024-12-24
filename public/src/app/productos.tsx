@@ -8,6 +8,20 @@ import ProductsCard from "../components/product-card";
 
 export function Products() {
   const [adminPhone, setAdminPhone] = useState("");
+
+  const [listImages, setListImages] = useState<string[]>([]);
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const keys = ["set_product1", "set_product2", "set_product3"];
+      const images = keys
+        .map((key) => {
+          const item = localStorage.getItem(key);
+          return item ? JSON.parse(item) : null;
+        }); 
+      setListImages(images);
+    }
+  }, []);
+
   const messaje = "Gracias por comunicarse con Safir, Por favor infórmanos en que municipio vives y con quien has tenido historial de créditos.";
 
   const DATA = [
@@ -16,7 +30,7 @@ export function Products() {
         "Financia el SOAT y Tecno de tu carro o moto, rápido y sin complicaciones.",
       client: "SOAT y Tecnomecanica",
       title: "",
-      img: "/image/soat1.webp",
+      img: listImages[0],
       route: "/soat",
       messaje: "",
     },
@@ -25,7 +39,7 @@ export function Products() {
         "Para independientes y empleados con buen historial de crédito.",
       client: "Líneas de Crédito",
       title: "",
-      img: "/image/credito1.webp",
+      img: listImages[1],
       route: "/credito",
       messaje: "",
     },
@@ -34,7 +48,7 @@ export function Products() {
         "Un millón en una hora, cupo rotativo dirigido a personas con historial crediticio positivo.",
       client: "Credimillon",
       title: "",
-      img: "/image/credimillon1.webp",
+      img: listImages[2],
       route: `https://wa.me/${adminPhone}?text=${messaje}`,
       messaje: "",
     },

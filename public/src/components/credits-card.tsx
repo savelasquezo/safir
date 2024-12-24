@@ -17,7 +17,7 @@ const CreditItemsCard: React.FC<ItemsCardProps> = ({ img, feedback, client, titl
     <a href={`https://wa.me/${adminPhone}?text=${encodeURIComponent(messaje)}`} target="_blank" className="shadow-2xl hover:scale-105 transition-transform duration-500">
       <Card shadow={true} className="items-center text-center">
         <CardHeader floated={false} className="">
-          <img src={img} alt="picture" />
+          <img src={img? img: "/image/placeholder.png"} alt="picture" />
         </CardHeader>
         <CardBody>
           <Typography variant="h4" color="blue-gray" className="uppercase">

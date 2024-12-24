@@ -105,10 +105,17 @@ class SettingsAdmin(admin.ModelAdmin):
         "instagram",
         )}
 
+    fIamges = {"fields": (
+        ("product1","product2","product3"),
+        ("soat1","soat2","soat3"),
+        ("credit1","credit2","credit3","credit4"),
+        )}
+
     fieldsets = (
         ("", fConfig),
         ("Medios", fPayments),
         ("Social/Media", fSocial),
+        ("Imagenes", fIamges),
         )
 
     def has_delete_permission(self, request, obj=None):

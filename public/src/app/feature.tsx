@@ -23,7 +23,7 @@ export function Features() {
             </svg>
         </span>
             <h1 className="my-1 gradient-red text-base uppercase tracking-wide font-cocogoose">Misión</h1>
-            <p className="py-2 text-center">Nuestra misión es fomentar la inclusión financiera y el desarrollo socioeconómico, ofreciendo préstamos, 
+            <p className="py-2 text-sm text-center font-cocogoose">Nuestra misión es fomentar la inclusión financiera y el desarrollo socioeconómico, ofreciendo préstamos, 
               financiamiento y asesorías a independientes y empleados, por medio de herramientas tecnológicas y soluciones financieras accesibles e 
               inmediatas para que las personas puedan cumplir alcanzar sus objetivos en el corto plazo.</p>
         </div>
@@ -38,7 +38,7 @@ export function Features() {
             </svg>
         </span>
             <h1 className="my-1 gradient-red text-base uppercase tracking-wide font-cocogoose">Visión</h1>
-            <p className="py-2 text-center">Consolidarnos en la región como un modelo de préstamos, financiamiento y educación financiera 
+            <p className="py-2 text-sm text-center font-cocogoose">Consolidarnos en la región como un modelo de préstamos, financiamiento y educación financiera 
               que vaya a la vanguardia de las nuevas tecnologías y herramientas (Fintech), siendo un referente en el impulso de la inclusión 
               y la educación financiera, mejorando así la calidad de vida de todas las personas desatendidas por el sector financiero tradicional.
             </p>

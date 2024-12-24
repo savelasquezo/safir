@@ -4,11 +4,11 @@ import { ItemsCardProps } from '@/lib/types/types';
 
 const ProductsCard: React.FC<ItemsCardProps> = ({ img, feedback, client, title, route }) => {
   const openInNewTab = client === "Credimillon";
-
+  console.log(img)
   return (
     <a href={route} target={openInNewTab ? "_blank" : "_self"} rel="noopener noreferrer" className="shadow-2xl hover:scale-105 transition-transform duration-500">
       <Card shadow={true} className="items-center text-center">
-        <CardHeader floated={false} className=""><img src={img} alt="" /></CardHeader>
+        <CardHeader floated={false} className=""><img src={img? img: "/image/placeholder.png"} alt="" /></CardHeader>
         <CardBody>
           <Typography variant="h4" color="blue-gray">{client}</Typography>
           <Typography variant="small" className="mb-2 font-medium !text-gray-700">{title}</Typography>

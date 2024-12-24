@@ -70,6 +70,20 @@ class Settings(models.Model):
     nequi = models.CharField(_("Nequi"), max_length=64, blank=True, null=True)
     bancolombia = models.CharField(_("Bancolombia"), max_length=64, blank=True, null=True)
 
+    product1 = models.ImageField(_("SOAT-Tecnomecanica"), upload_to=ImageUploadTo, max_length=32, null=True, blank=True, help_text="Width-(1800px) - Height-(1600px)")
+    product2 = models.ImageField(_("Lineas de Credito"), upload_to=ImageUploadTo, max_length=32, null=True, blank=True, help_text="Width-(1800px) - Height-(1600px)")
+    product3 = models.ImageField(_("Credimillon"), upload_to=ImageUploadTo, max_length=32, null=True, blank=True, help_text="Width-(1800px) - Height-(1600px)")
+
+    soat1 = models.ImageField(_("SOAT-Tecnomecanica"), upload_to=ImageUploadTo, max_length=32, null=True, blank=True, help_text="Width-(1800px) - Height-(1600px)")
+    soat2 = models.ImageField(_("Licencias"), upload_to=ImageUploadTo, max_length=32, null=True, blank=True, help_text="Width-(1800px) - Height-(1600px)")
+    soat3 = models.ImageField(_("Otros"), upload_to=ImageUploadTo, max_length=32, null=True, blank=True, help_text="Width-(1800px) - Height-(1600px)")
+    
+    credit1 = models.ImageField(_("Independiente"), upload_to=ImageUploadTo, max_length=32, null=True, blank=True, help_text="Width-(1800px) - Height-(1600px)")
+    credit2 = models.ImageField(_("Empleado"), upload_to=ImageUploadTo, max_length=32, null=True, blank=True, help_text="Width-(1800px) - Height-(1600px)")
+    credit3 = models.ImageField(_("Safir"), upload_to=ImageUploadTo, max_length=32, null=True, blank=True, help_text="Width-(1800px) - Height-(1600px)")
+    credit4 = models.ImageField(_("Oportunidad"), upload_to=ImageUploadTo, max_length=32, null=True, blank=True, help_text="Width-(1800px) - Height-(1600px)")
+
+
     def __str__(self):
         return f"{self.default}"
 
